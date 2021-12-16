@@ -15,3 +15,10 @@ https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-c
 
 ## Other
 https://askubuntu.com/questions/964377/snap-application-doesnt-see-files-from-another-partition
+
+# Feature
+https://linuxcontainers.org/lxd/introduction/
+
+
+# Ark
+https://web.archive.org/web/20211216192539/https://blog.simos.info/running-x11-software-in-lxd-containers/
