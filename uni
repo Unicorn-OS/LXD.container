@@ -5,4 +5,4 @@
   roles:
   - role: LXD
   - role: init
-  # - role: test
+  - role: test
