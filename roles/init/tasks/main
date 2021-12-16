@@ -9,5 +9,6 @@
   ansible.builtin.shell: cat ansible-preseed | lxd init --preseed
   args:
     chdir: '/tmp'
+    creates: /var/snap/lxd/common/lxd/storage-pools/default
 
 # https://linuxcontainers.org/lxd/docs/master/preseed/
