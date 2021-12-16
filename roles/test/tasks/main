@@ -1,4 +1,26 @@
 ---
-- name: Print the gateway for each host when defined
-  ansible.builtin.debug:
-    msg: System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }}
+- name: Create a started container
+  community.general.lxd_container:
+    name: mycontainer
+    state: started
+    source:
+      type: image
+      mode: pull
+      server: https://images.linuxcontainers.org
+      protocol: lxd # if you get a 404, try setting protocol: simplestreams
+      alias: ubuntu/xenial/amd64
+    profiles: ["default"]
+    wait_for_ipv4_addresses: true
+    timeout: 600
+
+- name: Check python is installed in container
+  delegate_to: mycontainer
+  ansible.builtin.raw: dpkg -s python
+  register: python_install_check
+  failed_when: python_install_check.rc not in [0, 1]
+  changed_when: false
+
+- name: Install python in container
+  delegate_to: mycontainer
+  ansible.builtin.raw: apt-get install -y python
+  when: python_install_check.rc == 1

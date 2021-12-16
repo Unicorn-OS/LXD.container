@@ -1,0 +1,17 @@
+---
+- name: Installation
+  community.general.snap:
+    name:
+      - lxd
+  become: true
+  notify:
+    - restart.os
+
+- name: allow non-root user
+  user:
+    name: '{{ansible_user}}'
+    groups: lxd
+    append: yes
+  become: true
+
+# https://ubuntu.com/server/docs/containers-lxd

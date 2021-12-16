@@ -1,0 +1,5 @@
+---
+
+- name: restart.os
+  reboot:
+  become: true
