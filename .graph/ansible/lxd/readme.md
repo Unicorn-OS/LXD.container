@@ -10,3 +10,4 @@ connect
 
 # sch:
 https://www.google.com/search?q=ansible+lxd+module
+https://www.google.com/search?q=ansible_connection%3Dlxd
