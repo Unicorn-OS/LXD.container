@@ -1,6 +1,9 @@
+---
 config:
   environment.DISPLAY: :0
   environment.PULSE_SERVER: unix:/home/ubuntu/pulse-native
+  nvidia.driver.capabilities: all
+  nvidia.runtime: "true"
   user.user-data: |
     #cloud-config
     runcmd:
@@ -9,7 +12,7 @@ config:
       - x11-apps
       - mesa-utils
       - pulseaudio
-description: GUI LXD profile
+description: GUI profile with Graphics Aceleration via Nvidia
 devices:
   PASocket1:
     bind: container

@@ -1,0 +1,12 @@
+---
+- name: Create a profile
+  community.general.lxd_profile:
+    name: macvlan
+    state: present
+    config: {}
+    description: my macvlan profile
+    devices:
+      eth0:
+        nictype: macvlan
+        parent: br0
+        type: nic

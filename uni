@@ -5,4 +5,5 @@
   roles:
   - role: LXD
   - role: init
-  - role: test
+  - role: GUI app.profile
+  # - role: test

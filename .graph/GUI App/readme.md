@@ -10,7 +10,7 @@ https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-c
 
 
 # Problem: Snap install of LXD has confinement, restricting host device node passthrough
-## Solution: "There is an updated guide that simplifies the process, https://blog.simos.info/running-x11-software-in-lxd-containers/"
+## Solution: "There is an updated guide that simplifies the process"
 - https://askubuntu.com/questions/1211765/how-to-run-if-possible-gpu-accelerated-apps-in-lxc-lxd-container
 
 ## Other
