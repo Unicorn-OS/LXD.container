@@ -1,8 +1,9 @@
 ---
 
-- name: if LXD exists
+- name: if LXD exists, use to set "manual restart"
   shell: "which lxd"
   register: result
+  failed_when: false
   ignore_errors: true
 
 - name: Installation
@@ -23,7 +24,7 @@
 
 - meta: flush_handlers
 
-- name: halt and manually restart if local
+- name: manually restart if local
   meta: end_host
   when: ansible_connection == 'local' and result.rc != 0
 
