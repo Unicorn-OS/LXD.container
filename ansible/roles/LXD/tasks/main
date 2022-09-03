@@ -2,5 +2,5 @@
 - include_tasks: '{{ ansible_os_family }}/{{ ansible_distribution }}/{{ ansible_distribution_major_version }}'
   when: distro_package
 
-- include_tasks: Snap
+- include_tasks: Snap/main
   when: snap
