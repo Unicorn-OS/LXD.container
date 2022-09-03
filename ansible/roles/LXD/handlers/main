@@ -2,4 +2,9 @@
 
 - name: restart.os
   reboot:
+  when: ansible_connection != 'local
   become: true
+
+- name: halt and manually restart if local
+  meta: end_play
+  when: ansible_connection == 'local

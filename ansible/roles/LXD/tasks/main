@@ -6,6 +6,7 @@
   become: true
   notify:
     - restart.os
+    - halt and manually restart if local
 
 - name: allow non-root user
   user:
