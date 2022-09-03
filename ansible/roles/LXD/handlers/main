@@ -5,11 +5,7 @@
   when: ansible_connection != 'local'
   become: true
 
-- name: halt and manually restart if local
-  meta: end_host
-  when: ansible_connection == 'local'
-
-- name: msg manually restart
+- name: ask manually restart
   ansible.builtin.debug:
     msg: "You need to manually restart this node, as it's connection = local. Then run this playbook again and it'll resume configuring LXD profiles!"
   when: ansible_connection == 'local'

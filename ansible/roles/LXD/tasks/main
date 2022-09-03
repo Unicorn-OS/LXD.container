@@ -6,7 +6,11 @@
   become: true
   notify:
     - restart.os
-    - halt and manually restart if local
+    - ask manually restart
+
+- name: halt and manually restart if local
+  meta: end_host
+  when: ansible_connection == 'local'
 
 - name: allow non-root user
   user:
