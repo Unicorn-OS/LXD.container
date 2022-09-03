@@ -1,35 +1,32 @@
 ---
 
-- name: if LXD exists
+- name: if LXD exists, used in "manual restart"
   shell: "which lxd"
-  register: exists
+  register: exist
   failed_when: false
   ignore_errors: true
 
-- name: Install LXD using Snapcraft
-  block:
-  - name: Installation
-    community.general.snap:
-      name:
-        - lxd
-    become: true
-    notify:
-      - restart.os
-      - ask manually restart
+- name: Installation
+  community.general.snap:
+    name:
+      - lxd
+  become: true
+  notify:
+    - restart.os
+    - ask manually restart
 
-  - name: allow non-root user
-    user:
-      name: '{{ansible_user}}'
-      groups: lxd
-      append: yes
-    become: true
+- name: allow non-root user
+  user:
+    name: '{{ansible_user}}'
+    groups: lxd
+    append: yes
+  become: true
 
-  - meta: flush_handlers
+- meta: flush_handlers
 
-  - name: manually restart if local
-    meta: end_host
-    when: ansible_connection == 'local'
-  when: exists.rc != 0
+- name: end & manually restart if local
+  meta: end_host
+  when: ansible_connection == 'local' and exist.rc != 0
 
 
 # https://ubuntu.com/server/docs/containers-lxd
