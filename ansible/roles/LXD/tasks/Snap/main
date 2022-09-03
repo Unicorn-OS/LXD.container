@@ -1,0 +1,31 @@
+---
+
+- name: if LXD exists
+  shell: "which lxd"
+  register: result
+  ignore_errors: true
+
+- name: Installation
+  community.general.snap:
+    name:
+      - lxd
+  become: true
+  notify:
+    - restart.os
+    - ask manually restart
+
+- name: allow non-root user
+  user:
+    name: '{{ansible_user}}'
+    groups: lxd
+    append: yes
+  become: true
+
+- meta: flush_handlers
+
+- name: halt and manually restart if local
+  meta: end_host
+  when: ansible_connection == 'local' and result.rc != 0
+
+
+# https://ubuntu.com/server/docs/containers-lxd

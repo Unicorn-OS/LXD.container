@@ -1,22 +1,6 @@
 ---
-- name: Installation
-  community.general.snap:
-    name:
-      - lxd
-  become: true
-  notify:
-    - restart.os
-    - ask manually restart
+- include_tasks: '{{ ansible_os_family }}/{{ ansible_distribution }}/{{ ansible_distribution_major_version }}'
+  when: distro_package
 
-- name: halt and manually restart if local
-  meta: end_host
-  when: ansible_connection == 'local'
-
-- name: allow non-root user
-  user:
-    name: '{{ansible_user}}'
-    groups: lxd
-    append: yes
-  become: true
-
-# https://ubuntu.com/server/docs/containers-lxd
+- include_tasks: Snap
+  when: snap
