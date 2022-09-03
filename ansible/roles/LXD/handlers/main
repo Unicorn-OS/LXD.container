@@ -6,5 +6,5 @@
   become: true
 
 - name: halt and manually restart if local
-  meta: end_play
+  meta: end_host
   when: ansible_connection == 'local
