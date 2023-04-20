@@ -1,0 +1,24 @@
+---
+#
+
+- name: Create a test container
+  community.general.lxd_container:
+    name: fedora-37
+    ignore_volatile_options: true
+    state: started
+    source:
+      protocol: simplestreams
+      type: image
+      mode: pull
+      server: https://images.linuxcontainers.org
+      alias: fedora/37/amd64
+    profiles: ["default"]
+    wait_for_ipv4_addresses: true
+
+- name: Check if ip address is set
+  ansible.builtin.shell: lxc exec fedora-37 ip a | grep -i "inet "
+  register: ip
+
+- name: debug
+  debug:
+    msg: "Network information: {{ip.stdout}}"

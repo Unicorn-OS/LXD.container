@@ -5,7 +5,8 @@
     storage_pool_size: 25GB
 
   roles:
-  - role: LXD
-  # - role: init
-  # - role: GUI app.profile
-  # - role: test
+  # - LXD
+  - test
+  # - init
+  # - GUI app.profile
+  # - test
