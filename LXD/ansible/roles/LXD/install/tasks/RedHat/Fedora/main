@@ -40,3 +40,6 @@
     state: enabled
   become: true
   notify: firewall reload
+
+- name: Flush handlers
+  meta: flush_handlers
