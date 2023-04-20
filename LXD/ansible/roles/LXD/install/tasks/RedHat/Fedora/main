@@ -24,9 +24,13 @@
     append: yes
   become: true
 
-- name: preseed yaml
-  debug:
-    msg: "todo"
+# https://stackoverflow.com/questions/26677064/create-and-use-group-without-restart
+- name: reset ssh connection to apply user changes
+  ansible.builtin.meta:
+    reset_connection
+
+- ansible.builtin.include_role:
+    name: LXD/init preseed
 
 - name: allow traffic on LXD bridge in firewalld
   ansible.posix.firewalld:
@@ -34,3 +38,4 @@
     interface: lxdbr0
     permanent: true
     state: enabled
+  become: true

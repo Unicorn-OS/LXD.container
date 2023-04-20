@@ -2,7 +2,7 @@
 
 - name: Template preseed file
   ansible.builtin.template:
-    src: default.j2
+    src: "preseed-{{ ansible_distribution }}.yml.j2"
     dest: '/tmp/ansible-preseed'
 
 - name: lxd init preseed
