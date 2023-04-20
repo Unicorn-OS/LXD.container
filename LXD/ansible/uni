@@ -1,6 +1,8 @@
 ---
 - hosts: node
   gather_facts: yes
+  vars:
+    storage_pool_size: 25GB
 
   roles:
   - role: LXD

@@ -1,0 +1,3 @@
+[submodule "LXD/.dependency/Snapcraft"]
+	path = LXD/.dependency/Snapcraft
+	url = https://github.com/Unicorn-OS/Snapcraft.git
