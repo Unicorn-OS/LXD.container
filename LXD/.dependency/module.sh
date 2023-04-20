@@ -15,6 +15,8 @@ clone(){
 	else
 		url="https://"${git_host}/${namespace}/${package}".git"
 	fi
+	# Remove empty package
+	rmdir $package
 	if [ ! -d "${package}" ]; then 
 		git clone $url
 	fi
