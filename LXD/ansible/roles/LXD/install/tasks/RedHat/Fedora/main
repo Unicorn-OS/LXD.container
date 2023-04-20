@@ -4,3 +4,33 @@
 - name: Fedora requires Snapcraft
   ansible.builtin.include_role:
     name: .dependency/Snapcraft
+
+- name: install LXD snap
+  community.general.snap:
+    name: lxd
+  become: true
+  notify: snap start lxd
+
+- name: Ensure group LXD exists
+  ansible.builtin.group:
+    name: lxd
+    state: present
+  become: true
+
+- name: Add user to lxd group
+  ansible.builtin.user:
+    name: "{{ansible_user}}"
+    groups: lxd
+    append: yes
+  become: true
+
+- name: preseed yaml
+  debug:
+    msg: "todo"
+
+- name: allow traffic on LXD bridge in firewalld
+  ansible.posix.firewalld:
+    zone: trusted
+    interface: lxdbr0
+    permanent: true
+    state: enabled
