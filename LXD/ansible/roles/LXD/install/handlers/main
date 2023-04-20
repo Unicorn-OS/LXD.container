@@ -13,3 +13,7 @@
 - name: snap start lxd
   ansible.builtin.shell: snap start lxd
   become: true
+
+- name: firewall reload
+  ansible.builtin.shell: firewall-cmd --reload
+  become: true

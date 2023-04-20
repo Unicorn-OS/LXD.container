@@ -39,3 +39,4 @@
     permanent: true
     state: enabled
   become: true
+  notify: firewall reload
