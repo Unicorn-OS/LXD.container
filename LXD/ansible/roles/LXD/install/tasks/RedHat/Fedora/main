@@ -1,0 +1,6 @@
+---
+# https://www.cyberciti.biz/faq/how-to-install-setup-lxd-on-fedora-linux/
+
+- name: Fedora requires Snapcraft
+  ansible.builtin.include_role:
+    name: .dependency/Snapcraft

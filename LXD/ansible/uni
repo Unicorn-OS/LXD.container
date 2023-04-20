@@ -1,11 +1,11 @@
 ---
-- hosts: node
+- hosts: fedora #, ubuntu, local
   gather_facts: yes
   vars:
     storage_pool_size: 25GB
 
   roles:
   - role: LXD
-  - role: init
-  - role: GUI app.profile
+  # - role: init
+  # - role: GUI app.profile
   # - role: test
