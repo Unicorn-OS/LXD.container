@@ -1,7 +1,7 @@
 # sch:
 https://www.google.com/search?q=lxd+gui+app , https://www.google.com/search?q=ubuntu+lxd+gui+app
 
-# doc:
+# discuss:
 https://discuss.linuxcontainers.org/t/overview-gui-inside-containers/8767
 
 # source:
@@ -9,11 +9,10 @@ https://discuss.linuxcontainers.org/t/overview-gui-inside-containers/8767
 - https://gist.github.com/stueja/447bd3bc0d510a0a7e50f9f1ef58ad75
 
 # Guide
+official: https://blog.simos.info/running-x11-software-in-lxd-containers/
+
 ## 2022
 https://dev.to/amabe_dev/how-to-run-gui-apps-in-lxd-containers-882
-
-## 2021
-https://blog.simos.info/running-x11-software-in-lxd-containers/
 
 ## original: 2017
 https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-containers-on-your-ubuntu-desktop/
