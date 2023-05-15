@@ -4,6 +4,10 @@ https://www.google.com/search?q=lxd+gui+app , https://www.google.com/search?q=ub
 # doc:
 https://discuss.linuxcontainers.org/t/overview-gui-inside-containers/8767
 
+# source:
+- https://github.com/bitsandsalsa/lxd_gui_container
+- https://gist.github.com/stueja/447bd3bc0d510a0a7e50f9f1ef58ad75
+
 # Guide
 ## 2022
 https://dev.to/amabe_dev/how-to-run-gui-apps-in-lxd-containers-882
