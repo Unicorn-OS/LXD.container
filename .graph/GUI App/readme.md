@@ -12,8 +12,8 @@ https://discuss.linuxcontainers.org/t/overview-gui-inside-containers/8767
 ## using: proxy devices
 official: https://blog.simos.info/running-x11-software-in-lxd-containers/
 
-## 2022
-https://dev.to/amabe_dev/how-to-run-gui-apps-in-lxd-containers-882
+## using: X11 socket
+2022 https://dev.to/amabe_dev/how-to-run-gui-apps-in-lxd-containers-882
 
 ## original: 2017
 https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-containers-on-your-ubuntu-desktop/
