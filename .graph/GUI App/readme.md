@@ -9,6 +9,7 @@ https://discuss.linuxcontainers.org/t/overview-gui-inside-containers/8767
 - https://gist.github.com/stueja/447bd3bc0d510a0a7e50f9f1ef58ad75
 
 # Guide
+## using: proxy devices
 official: https://blog.simos.info/running-x11-software-in-lxd-containers/
 
 ## 2022
