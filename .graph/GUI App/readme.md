@@ -1,7 +1,10 @@
 # sch:
-https://www.google.com/search?q=ubuntu+lxd+gui+app
+https://www.google.com/search?q=lxd+gui+app , https://www.google.com/search?q=ubuntu+lxd+gui+app
 
 # Guide
+## 2022
+https://dev.to/amabe_dev/how-to-run-gui-apps-in-lxd-containers-882
+
 ## 2021
 https://blog.simos.info/running-x11-software-in-lxd-containers/
 
