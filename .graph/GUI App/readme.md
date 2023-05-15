@@ -1,12 +1,12 @@
 # sch:
 https://www.google.com/search?q=lxd+gui+app , https://www.google.com/search?q=ubuntu+lxd+gui+app
 
-# discuss:
-https://discuss.linuxcontainers.org/t/overview-gui-inside-containers/8767
+# index:
+- https://discuss.linuxcontainers.org/t/overview-gui-inside-containers/8767
+- https://gist.github.com/stueja/447bd3bc0d510a0a7e50f9f1ef58ad75
 
 # source:
 - https://github.com/bitsandsalsa/lxd_gui_container
-- https://gist.github.com/stueja/447bd3bc0d510a0a7e50f9f1ef58ad75
 
 # Method
 ## using: proxy devices
@@ -29,7 +29,3 @@ https://askubuntu.com/questions/964377/snap-application-doesnt-see-files-from-an
 
 # Feature
 https://linuxcontainers.org/lxd/introduction/
-
-
-# Ark
-https://web.archive.org/web/20211216192539/https://blog.simos.info/running-x11-software-in-lxd-containers/
