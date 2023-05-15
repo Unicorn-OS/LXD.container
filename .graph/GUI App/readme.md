@@ -24,8 +24,4 @@ https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-c
 ## Solution: "There is an updated guide that simplifies the process"
 - https://askubuntu.com/questions/1211765/how-to-run-if-possible-gpu-accelerated-apps-in-lxc-lxd-container
 
-## Other
-https://askubuntu.com/questions/964377/snap-application-doesnt-see-files-from-another-partition
-
-# Feature
-https://linuxcontainers.org/lxd/introduction/
+Other: https://askubuntu.com/questions/964377/snap-application-doesnt-see-files-from-another-partition
