@@ -1,2 +1,2 @@
-# LXD
-LXD.container.Hyperion
+# LXD.hyperion
+LXD frontend for LXC containers virtualization!
