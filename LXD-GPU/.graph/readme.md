@@ -7,6 +7,10 @@ https://discuss.linuxcontainers.org/t/overview-gui-inside-containers/8767
 broken:
 - 2020 https://blog.simos.info/running-x11-software-in-lxd-containers/
 
+# Source:
+- https://gist.github.com/stueja/447bd3bc0d510a0a7e50f9f1ef58ad75
+- https://github.com/bitsandsalsa/lxd_gui_container
+
 # doc:
 - https://linuxcontainers.org/lxd/docs/master/instances/#type-gpu
 - https://www.funtoo.org/LXD/GPU_Acceleration
