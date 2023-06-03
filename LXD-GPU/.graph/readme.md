@@ -10,3 +10,6 @@ broken:
 # doc:
 - https://linuxcontainers.org/lxd/docs/master/instances/#type-gpu
 - https://www.funtoo.org/LXD/GPU_Acceleration
+
+# gpu.profile:
+https://discuss.linuxcontainers.org/t/cannot-start-lxc-containers-with-gui-profile/14497
