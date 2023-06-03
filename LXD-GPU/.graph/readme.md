@@ -2,9 +2,10 @@
 https://discuss.linuxcontainers.org/t/overview-gui-inside-containers/8767
 
 # guide:
-- 2022 https://dev.to/amabe_dev/how-to-run-gui-apps-in-lxd-containers-882
+- https://blog.swwomm.com/2022/08/lxd-containers-for-wayland-gui-apps.html
 
 broken:
+- 2022 https://dev.to/amabe_dev/how-to-run-gui-apps-in-lxd-containers-882
 - 2020 https://blog.simos.info/running-x11-software-in-lxd-containers/
 
 # Source:
