@@ -13,3 +13,6 @@ broken:
 
 # gpu.profile:
 https://discuss.linuxcontainers.org/t/cannot-start-lxc-containers-with-gui-profile/14497
+
+# sch:
+- https://www.google.com/search?q=lxd+gui+app
