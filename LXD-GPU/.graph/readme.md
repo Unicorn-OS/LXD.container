@@ -12,7 +12,7 @@ with modifications:
 - https://blog.simos.info/running-x11-software-in-lxd-containers/
 
 ## Wayland & XWayland
-https://discuss.linuxcontainers.org/t/howto-use-the-hosts-wayland-and-xwayland-servers-inside-containers/8765
+- https://discuss.linuxcontainers.org/t/howto-use-the-hosts-wayland-and-xwayland-servers-inside-containers/8765
 
 # Source:
 - https://gist.github.com/stueja/447bd3bc0d510a0a7e50f9f1ef58ad75
@@ -21,8 +21,6 @@ https://discuss.linuxcontainers.org/t/howto-use-the-hosts-wayland-and-xwayland-s
 # sch:
 - https://www.google.com/search?q=lxd+gui+app
 
-# Wayland:
-- https://discuss.linuxcontainers.org/t/howto-use-the-hosts-wayland-and-xwayland-servers-inside-containers/8765
 
 # Try
 - 2022 https://dev.to/amabe_dev/how-to-run-gui-apps-in-lxd-containers-882
