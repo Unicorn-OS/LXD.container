@@ -11,6 +11,9 @@ lxd: 5.14 on os: ubuntu 22.04 kernel: 5.19.0-43-generic #44~22.04.1-Ubuntu on: J
 with modifications:
 - https://blog.simos.info/running-x11-software-in-lxd-containers/
 
+## Wayland & XWayland
+https://discuss.linuxcontainers.org/t/howto-use-the-hosts-wayland-and-xwayland-servers-inside-containers/8765
+
 # Source:
 - https://gist.github.com/stueja/447bd3bc0d510a0a7e50f9f1ef58ad75
 - https://github.com/bitsandsalsa/lxd_gui_container
