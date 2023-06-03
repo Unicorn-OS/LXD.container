@@ -1,4 +1,4 @@
-# official:
+# index:
 https://discuss.linuxcontainers.org/t/overview-gui-inside-containers/8767
 
 # guide:
