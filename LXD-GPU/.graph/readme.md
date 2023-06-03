@@ -5,6 +5,7 @@ https://discuss.linuxcontainers.org/t/overview-gui-inside-containers/8767
 ## Works!
 lxd: 5.14 on os: ubuntu 22.04 kernel: 5.19.0-43-generic #44~22.04.1-Ubuntu on: June 3 2023
 - https://blog.swwomm.com/2022/08/lxd-containers-for-wayland-gui-apps.html
+  - change: `unix:/run/user/1000/wayland-1` to `unix:/run/user/1000/wayland-1`
 
 with modifications:
 - https://blog.simos.info/running-x11-software-in-lxd-containers/
