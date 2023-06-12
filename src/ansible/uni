@@ -1,9 +1,9 @@
 ---
-- hosts: test #, local
+- hosts: local #test, local
   vars:
     gui: true
   roles:
-  # - LXD
+  - LXD
   - GUI app
 
   # Test
