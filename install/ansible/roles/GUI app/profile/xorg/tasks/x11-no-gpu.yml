@@ -1,7 +1,4 @@
 ---
-- name: Run tasks/other.yaml instead of 'main'
-  ansible.builtin.include_role:
-    name: GUI app/get/xserver
 
 - name: Delete a profile
   community.general.lxd_profile:

@@ -1,10 +1,7 @@
 ---
-- name: proile_dir to make idempotent
-  ansible.builtin.file:
-    path: "{{profile_dir}}"
-    state: directory
-    owner: "{{ansible_user}}"
-  become: true
+- name: Run tasks/other.yaml instead of 'main'
+  ansible.builtin.include_role:
+    name: GUI app/get/xserver
 
 - name: include profile
   ansible.builtin.include_tasks:

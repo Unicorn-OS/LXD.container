@@ -1,4 +1,13 @@
 ---
+# This role is not needed! It's just here for debugging.
+
+- name: proile_dir to make idempotent
+  ansible.builtin.file:
+    path: "{{profile_dir}}"
+    state: directory
+    owner: "{{ansible_user}}"
+  become: true
+
 - name: set dynamically
   ansible.builtin.set_fact:
     profile: x11-no-gpu
