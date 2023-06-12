@@ -1,3 +1,5 @@
 ---
 dependencies:
-  - GUI app/.test/container
+  - GUI app
+  - LXD/.test/common
+  - GUI app/.test/xorg

@@ -1,0 +1,6 @@
+---
+- name: include test
+  ansible.builtin.include_tasks:
+    file: "{{item}}.yml"
+  loop:
+  - x11-no-gpu

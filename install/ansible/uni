@@ -7,6 +7,5 @@
 
   roles:
   - LXD
-  - GUI app/profile/xorg
-  - GUI app/.test
+  # - GUI app/.test
   # - LXD/.test

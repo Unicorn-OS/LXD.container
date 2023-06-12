@@ -10,8 +10,7 @@
     name: "{{ansible_user}}"
     groups: lxd
     append: yes
-  notify: reset connection
   become: true
 
 - name: reset connection so lxd works as a regular user
-  meta: flush_handlers
+  ansible.builtin.meta: reset_connection

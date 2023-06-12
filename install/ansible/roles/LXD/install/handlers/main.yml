@@ -1,4 +1,0 @@
----
-
-- name: reset connection
-  ansible.builtin.meta: reset_connection
