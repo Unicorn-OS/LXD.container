@@ -2,7 +2,7 @@
 
 - name: xeyes
   ansible.builtin.lineinfile:
-    path: "{{bin_dir}}/xeyes{{num}}lxc"
+    path: "{{bin_dir}}/xeyes{{num}}"
     regexp: "^lxc exec {{container}}{{num}}"
     line: "lxc exec {{container}}{{num}} -- xeyes"
     mode: '0744'
@@ -10,7 +10,7 @@
 
 - name: gears
   ansible.builtin.lineinfile:
-    path: "{{bin_dir}}/gears{{num}}lxc"
+    path: "{{bin_dir}}/gears{{num}}"
     regexp: "^lxc exec {{container}}{{num}}"
     line: "lxc exec {{container}}{{num}} -- glxgears"
     mode: '0744'
@@ -18,7 +18,7 @@
 
 - name: connect
   ansible.builtin.lineinfile:
-    path: "{{bin_dir}}/connect{{num}}lxc"
+    path: "{{bin_dir}}/connect{{num}}"
     regexp: "^lxc exec {{container}}{{num}}"
     line: "lxc exec {{container}}{{num}} -- sudo -u ubuntu -i"
     mode: '0744'
