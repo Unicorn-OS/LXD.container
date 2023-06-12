@@ -14,7 +14,7 @@ ansible_user=me
 ansible_become_password=u
 
 [ubuntu]
-192.168.122.85
+192.168.122.4
 
 [ubuntu:vars]
 ansible_user=me
@@ -22,5 +22,5 @@ ansible_become_password=u
 
 
 [test:children]
-fedora
+; fedora
 ubuntu

@@ -1,0 +1,4 @@
+---
+dependencies:
+- LXD/install
+# - LXD/init

@@ -1,0 +1,9 @@
+---
+- hosts: test #local, fedora, ubuntu
+  vars:
+    gui: true
+    wayland: true
+    gpu: false
+
+  roles:
+  - LXD

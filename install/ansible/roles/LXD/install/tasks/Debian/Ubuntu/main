@@ -1,0 +1,14 @@
+---
+- name: Install LXD snap
+  community.general.snap:
+    name:
+      - lxd
+  become: true
+
+- name: add $USER to lxd group
+  ansible.builtin.user:
+    name: "{{ansible_user}}"
+    groups: lxd
+    append: yes
+  notify: reboot
+  become: true
