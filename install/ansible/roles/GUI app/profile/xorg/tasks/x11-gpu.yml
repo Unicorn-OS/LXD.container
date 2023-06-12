@@ -1,10 +1,10 @@
 ---
 
-- name: Create GPU accelerated Xorg profile
+- name: Create unaccelerated Xorg profile (Intel)
   community.general.lxd_profile:
-    name: x11-no-gpu
+    name: x11-gpu
     state: present
-    description: unaccelerated Xorg
+    description: GPU accelerated Xorg
     config:
       environment.DISPLAY: :0
       user.user-data: |
@@ -14,6 +14,7 @@
         packages:
           - x11-apps
           - mesa-utils
+          - pulseaudio
     devices:
       X0:
         bind: container
@@ -22,4 +23,10 @@
         security.gid: "1000"
         security.uid: "1000"
         type: proxy
+      mygpu:
+        type: gpu
+    when: gpu == 'intel' or gpu == 'amd'
 
+
+# Have an additional profile for Nvidia GPUs!
+# when: gpu == 'nvidia'

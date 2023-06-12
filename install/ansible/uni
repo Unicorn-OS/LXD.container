@@ -1,13 +1,14 @@
 ---
-- hosts: test
+- hosts: test, local
   vars:
     gui: true
     wayland: true
     gpu: false
 
   roles:
-  - LXD
-  - GUI app
+  # - LXD
+  # - GUI app
   # Test
-  - GUI app/.test
+  # - GUI app/.test
   # - LXD/.test
+  - LXD/.test/temp
