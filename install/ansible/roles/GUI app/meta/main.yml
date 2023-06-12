@@ -1,2 +1,3 @@
 dependencies:
+  # - LXD   # disable to speed up development iteration
   - GUI app/profile/xorg

@@ -25,7 +25,7 @@
         type: proxy
       mygpu:
         type: gpu
-    when: gpu == 'intel' or gpu == 'amd'
+  when: (gpu_type == 'intel') or (gpu_type == 'amd') or (gpu_type == 'virtio')
 
 
 # Have an additional profile for Nvidia GPUs!

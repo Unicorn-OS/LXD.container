@@ -1,3 +1,0 @@
----
-- debug:
-    msg: "This Node: {{ansible_host}}"

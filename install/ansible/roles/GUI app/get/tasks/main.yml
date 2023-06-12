@@ -3,4 +3,5 @@
   ansible.builtin.include_tasks:
     file: "{{item}}.yml"
   loop:
-  - xserver
+  - GPU type
+  - xserver Display

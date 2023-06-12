@@ -1,5 +1,0 @@
----
-dependencies:
-  - GUI app
-  - LXD/.test/common
-  - GUI app/.test/xorg

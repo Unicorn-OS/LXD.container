@@ -1,6 +1,6 @@
 ---
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/env_lookup.html
-- name: set host_xserver from DISPLAY
+- name: get host_xserver DISPLAY
   ansible.builtin.set_fact:
     host_xserver: "{{ lookup('ansible.builtin.env', 'DISPLAY') | replace(':', '') }}"
   when: get_display

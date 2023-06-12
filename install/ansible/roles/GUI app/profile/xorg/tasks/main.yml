@@ -5,3 +5,4 @@
     file: "{{item}}.yml"
   loop:
   - x11-no-gpu
+  - x11-gpu

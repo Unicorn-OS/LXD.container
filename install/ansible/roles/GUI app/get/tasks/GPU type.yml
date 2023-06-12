@@ -1,0 +1,4 @@
+---
+- name: Set GPU type
+  ansible.builtin.set_fact:
+    gpu_type: "{{'virtio' if ansible_system_vendor == 'QEMU'}}"

@@ -1,0 +1,6 @@
+---
+- debug:
+    msg: "This Node: {{ansible_host}}"
+
+- debug:
+    msg: "GPU Type: {{gpu_type}}"
