@@ -1,0 +1,6 @@
+---
+host_xserver: 1
+
+get_display: true
+
+debug: true

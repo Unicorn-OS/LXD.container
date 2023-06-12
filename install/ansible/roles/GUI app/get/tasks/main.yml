@@ -1,7 +1,6 @@
 ---
-
-- name: include profile
+- name: include
   ansible.builtin.include_tasks:
     file: "{{item}}.yml"
   loop:
-  - x11-no-gpu
+  - xserver

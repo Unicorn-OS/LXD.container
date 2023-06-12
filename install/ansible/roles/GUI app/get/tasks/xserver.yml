@@ -8,3 +8,4 @@
 - name: Test
   debug:
     msg: "Host xserver {{host_xserver}}"
+  when: debug

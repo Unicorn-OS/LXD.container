@@ -1,0 +1,5 @@
+---
+# https://adminswerk.de/multi-line-string-yaml-ansible-I/
+
+extra_packages: |
+  - geany

@@ -1,0 +1,16 @@
+---
+- name: Create a container
+  community.general.lxd_container:
+    name: mycontainer
+    ignore_volatile_options: true
+    state: started
+    source:
+      type: image
+      mode: pull
+      server: https://images.linuxcontainers.org
+      protocol: lxd # if you get a 404, try setting protocol: simplestreams
+      # alias: "ubuntu/22.04/{{architecture}}"
+      alias: "ubuntu/focal/{{architecture}}"
+    profiles: ["default", "x11-no-gpu"]
+    wait_for_ipv4_addresses: true
+    timeout: 600

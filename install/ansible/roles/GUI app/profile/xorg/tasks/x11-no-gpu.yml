@@ -4,12 +4,12 @@
   community.general.lxd_profile:
     name: x11-no-gpu
     state: absent
+  when: debug
 
 - name: Create a profile
   community.general.lxd_profile:
     name: x11-no-gpu
     state: present
-    config: {}
     description: GUI LXD profile
     config:
       environment.DISPLAY: :0
@@ -21,10 +21,6 @@
           - x11-apps
           - mesa-utils
     devices:
-      eth0:
-        nictype: macvlan
-        parent: br0
-        type: nic
       X0:
         bind: container
         connect: unix:@/tmp/.X11-unix/X{{ host_xserver }}
