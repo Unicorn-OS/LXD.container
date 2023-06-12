@@ -7,5 +7,7 @@
 
   roles:
   - LXD
-  # - GUI app/.test
+  - GUI app
+  # Test
+  - GUI app/.test
   # - LXD/.test
