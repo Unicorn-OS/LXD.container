@@ -10,5 +10,8 @@
     name: "{{ansible_user}}"
     groups: lxd
     append: yes
-  notify: reboot
+  notify: Reset connection
   become: true
+
+- name: Flush handlers so lxd as a regular user will work
+  meta: flush_handlers

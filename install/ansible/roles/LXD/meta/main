@@ -1,4 +1,4 @@
 ---
 dependencies:
-- LXD/install
-# - LXD/init
+# - LXD/install
+- LXD/init

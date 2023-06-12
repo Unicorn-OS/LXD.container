@@ -6,5 +6,5 @@ https://linuxcontainers.org/lxd/getting-started-cli/
 sudo adduser $USER lxd
 
 
-# `lxd init`
+# initialize: `lxd init`
 https://linuxcontainers.org/lxd/docs/latest/howto/initialize/

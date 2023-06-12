@@ -1,0 +1,18 @@
+---
+# default
+clustering: no
+
+new_storage_pool: yes
+
+storage_backend: btrfs
+
+connect_to_server: no
+
+network_bridge: yes
+
+bridge_name: lxdbr0
+
+cache_image_updates: no
+
+# Set per machine:
+loop_device_size: 12

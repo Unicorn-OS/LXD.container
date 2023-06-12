@@ -2,3 +2,6 @@
 - name: reboot
   ansible.builtin.reboot:
   become: true
+
+- name: Reset connection
+  ansible.builtin.meta: reset_connection
