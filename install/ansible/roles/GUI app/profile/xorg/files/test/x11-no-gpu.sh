@@ -9,6 +9,7 @@ test(){
 }
 
 run_in_container(){
-  sudo apt install geany
+  echo $DISPLAY
+  sudo apt install -y geany
   geany
 }

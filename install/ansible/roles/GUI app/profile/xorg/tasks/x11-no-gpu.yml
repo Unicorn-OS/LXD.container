@@ -1,0 +1,37 @@
+---
+- name: Run tasks/other.yaml instead of 'main'
+  ansible.builtin.include_role:
+    name: GUI app/get/xserver
+
+- name: Delete a profile
+  community.general.lxd_profile:
+    name: x11-no-gpu
+    state: absent
+
+- name: Create a profile
+  community.general.lxd_profile:
+    name: x11-no-gpu
+    state: present
+    config: {}
+    description: GUI LXD profile
+    config:
+      environment.DISPLAY: :0
+      user.user-data: |
+        #cloud-config
+        runcmd:
+          - 'sed -i "s/; enable-shm = yes/enable-shm = no/g" /etc/pulse/client.conf'
+        packages:
+          - x11-apps
+          - mesa-utils
+    devices:
+      eth0:
+        nictype: macvlan
+        parent: br0
+        type: nic
+      X0:
+        bind: container
+        connect: unix:@/tmp/.X11-unix/X{{ host_xserver }}
+        listen: unix:@/tmp/.X11-unix/X0
+        security.gid: "1000"
+        security.uid: "1000"
+        type: proxy

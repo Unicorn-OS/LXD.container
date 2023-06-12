@@ -1,0 +1,23 @@
+---
+- name: set dynamically
+  ansible.builtin.set_fact:
+    profile: x11-no-gpu
+
+- name: Run tasks/other.yaml instead of 'main'
+  ansible.builtin.include_role:
+    name: GUI app/get/xserver
+
+- name: Template profile
+  ansible.builtin.template:
+    src: "{{profile}}.profile.j2"
+    dest: "{{profile_dir}}/x11-no-gpu.profile"
+
+- name: lxc profile edit 
+  ansible.builtin.shell: "{{ commands }}"
+  args:
+    chdir: "{{profile_dir}}"
+  loop:
+    - "lxc profile create {{profile}}"
+    - "cat {{profile}}.profile | lxc profile edit x11-no-gpu"
+  loop_control:
+    loop_var: commands

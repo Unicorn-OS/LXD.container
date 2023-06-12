@@ -7,5 +7,6 @@
 
   roles:
   # - LXD
-  # - test
-  - GUI app
+  # - LXD/test
+  # - GUI app/nested/weston
+  - GUI app/profile/xorg
