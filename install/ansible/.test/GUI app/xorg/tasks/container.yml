@@ -3,7 +3,7 @@
 # Works! has to be cloud image
 - name: Create a container
   community.general.lxd_container:
-    name: "{{container}}"
+    name: "{{container}}{{num}}"
     state: started
     source:
       type: image
@@ -12,13 +12,13 @@
       # protocol: lxd
       protocol: simplestreams
       alias: ubuntu/22.04/cloud
-    profiles: ["default", "x11-no-gpu"]
+    profiles: "['default', '{{profile}}']"
     wait_for_ipv4_addresses: true
 
-- name: script to test
-  ansible.builtin.lineinfile:
-    path: "{{bin_dir}}/xeyeslxd"
-    regexp: "^lxc exec {{container}}"
-    line: "lxc exec {{container}} -- xeyes"
-    mode: '0744'
-    create: true
+- ansible.builtin.include_tasks:
+    file: "{{item}}.yml"
+  loop:
+  - test
+
+- debug:
+    msg: "Container {{num}} from {{profile}}"

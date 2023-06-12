@@ -1,0 +1,17 @@
+---
+
+- name: xeyes
+  ansible.builtin.lineinfile:
+    path: "{{bin_dir}}/xeyes{{num}}lxd"
+    regexp: "^lxc exec {{container}}{{num}}"
+    line: "lxc exec {{container}}{{num}} -- xeyes"
+    mode: '0744'
+    create: true
+
+- name: connect
+  ansible.builtin.lineinfile:
+    path: "{{bin_dir}}/connect{{num}}lxd"
+    regexp: "^lxc exec {{container}}{{num}}"
+    line: "lxc exec {{container}}{{num}} -- sudo -u ubuntu -i"
+    mode: '0744'
+    create: true

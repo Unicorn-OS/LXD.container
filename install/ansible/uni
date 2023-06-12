@@ -8,5 +8,5 @@
 
   # Test
   # - .test/LXD
-  # - .test/GUI app
+  - .test/GUI app
   # - .test/temp

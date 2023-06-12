@@ -1,6 +1,6 @@
 ---
 dependencies:
-  - GUI app
+  # - GUI app
   - .test/common
   - .test/GUI app/xorg # OR by hand
   # - .test/GUI app/old. by hand

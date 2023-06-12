@@ -1,4 +1,4 @@
 ---
-container: mycontainer1
+container: mycontainer
 
 bin_dir: "/home/{{ansible_user}}/.local/bin"

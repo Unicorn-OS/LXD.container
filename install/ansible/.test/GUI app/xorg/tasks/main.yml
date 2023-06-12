@@ -1,6 +1,22 @@
 ---
-- name: include test
-  ansible.builtin.include_tasks:
-    file: "{{item}}.yml"
-  loop:
-  - x11-no-gpu
+# ToDo:
+# This can be Further simplified, using a Dictionary!
+# {num: 2, profile: x11-no-gpu }
+
+# Try simplest
+- name: First container
+  ansible.builtin.set_fact:
+    num: 1
+    profile: "x11-no-gpu"
+
+- ansible.builtin.include_tasks:
+    file: container.yml
+
+# Try GPU
+- name: Second container
+  ansible.builtin.set_fact:
+    num: 2
+    profile: "x11-gpu-{{ gpu_type }}"
+
+- ansible.builtin.include_tasks:
+    file: container.yml
