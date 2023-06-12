@@ -1,5 +1,5 @@
 ---
-- hosts: test, local
+- hosts: test #, local
   vars:
     gui: true
     wayland: true
@@ -7,8 +7,9 @@
 
   roles:
   # - LXD
-  # - GUI app
+  - GUI app
+
   # Test
   # - GUI app/.test
   # - LXD/.test
-  - LXD/.test/temp
+  # - LXD/.test/temp

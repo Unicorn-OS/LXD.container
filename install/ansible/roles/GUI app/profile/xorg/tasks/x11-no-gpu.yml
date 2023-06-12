@@ -1,6 +1,6 @@
 ---
 
-- name: Create GPU accelerated Xorg profile
+- name: Create unaccelerated Xorg profile
   community.general.lxd_profile:
     name: x11-no-gpu
     state: present

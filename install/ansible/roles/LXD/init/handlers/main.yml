@@ -3,3 +3,5 @@
 - name: reboot
   ansible.builtin.reboot:
   become: true
+  when: not ansible_host == 'localhost'
+  # Don't reboot if executing on the same host as ansible!

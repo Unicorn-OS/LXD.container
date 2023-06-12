@@ -1,8 +1,8 @@
 ---
 
-- name: Create unaccelerated Xorg profile (Intel)
+- name: Create GPU accelerated Xorg profile (Intel)
   community.general.lxd_profile:
-    name: x11-gpu
+    name: x11-gpu-intel
     state: present
     description: GPU accelerated Xorg
     config:
