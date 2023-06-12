@@ -2,5 +2,3 @@
 host_xserver: 1
 
 get_display: true
-
-bin_dir: "/home/{{ansible_user}}/.local/bin"

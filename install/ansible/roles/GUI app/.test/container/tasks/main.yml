@@ -21,3 +21,4 @@
     regexp: "^lxc exec {{container}}"
     line: "lxc exec {{container}} -- xeyes"
     mode: '0744'
+    create: true

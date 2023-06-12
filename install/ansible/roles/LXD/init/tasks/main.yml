@@ -5,12 +5,10 @@
     src: basic.cfg.j2
     dest: /tmp/basic.cfg
 
-# https://discuss.linuxcontainers.org/t/where-does-lxd-init-store-its-config-selections-file-or-database/11760/4
-# if (snap install){ creates: /var/snap/lxd/common/lxd/disks/default.img }
-
 - name: init LXD from preseed
   ansible.builtin.shell: cat basic.cfg | lxd init --preseed
   args:
     chdir: /tmp/
     creates: /var/snap/lxd/common/lxd/disks/default.img
+  become: true  # idempotent: Needs to run as root so it can see default.img!
   notify: reboot

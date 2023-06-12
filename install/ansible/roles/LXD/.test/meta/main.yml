@@ -1,3 +1,2 @@
 dependencies:
-# for {{bin_dir}}
-  - GUI app/get
+  - LXD/.test/container
