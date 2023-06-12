@@ -4,8 +4,3 @@
   ansible.builtin.set_fact:
     host_xserver: "{{ lookup('ansible.builtin.env', 'DISPLAY') | replace(':', '') }}"
   when: get_display
-
-- name: Test
-  debug:
-    msg: "Host xserver {{host_xserver}}"
-  when: debug

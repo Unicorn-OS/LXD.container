@@ -1,0 +1,3 @@
+dependencies:
+# for {{bin_dir}}
+  - GUI app/get

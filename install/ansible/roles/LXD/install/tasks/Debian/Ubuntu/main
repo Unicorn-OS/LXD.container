@@ -15,7 +15,3 @@
 
 - name: reset connection so lxd works as a regular user
   meta: flush_handlers
-
-- name: Try
-  debug:
-    msg: "Debug: {{ansible_architecture}}"

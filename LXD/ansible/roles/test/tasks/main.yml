@@ -19,6 +19,6 @@
   ansible.builtin.shell: lxc exec fedora-37 ip a | grep -i "inet "
   register: ip
 
-- name: debug
-  debug:
-    msg: "Network information: {{ip.stdout}}"
+# - name: debug
+#   debug:
+#     msg: "Network information: {{ip.stdout}}"

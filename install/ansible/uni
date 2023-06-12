@@ -1,12 +1,12 @@
 ---
-- hosts: test #local, fedora, ubuntu
+- hosts: test
   vars:
     gui: true
     wayland: true
     gpu: false
 
   roles:
-  # - LXD
-  # - LXD/test
-  # - GUI app/nested/weston
+  - LXD
   - GUI app/profile/xorg
+  - GUI app/.test
+  # - LXD/.test
