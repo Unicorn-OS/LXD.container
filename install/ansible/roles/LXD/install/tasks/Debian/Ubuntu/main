@@ -10,8 +10,12 @@
     name: "{{ansible_user}}"
     groups: lxd
     append: yes
-  notify: Reset connection
+  notify: reset connection
   become: true
 
-- name: Flush handlers so lxd as a regular user will work
+- name: reset connection so lxd works as a regular user
   meta: flush_handlers
+
+- name: Try
+  debug:
+    msg: "Debug: {{ansible_architecture}}"
