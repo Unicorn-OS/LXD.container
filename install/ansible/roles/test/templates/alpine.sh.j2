@@ -1,0 +1,8 @@
+# launch & connect to Alpine Linux
+lxc launch images:alpine/edge testAlpine
+
+lxc exec testAlpine -- /bin/sh
+
+# for ARM
+#lxc launch images:alpine/edge/arm64 testAlpine
+

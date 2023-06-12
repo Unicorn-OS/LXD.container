@@ -1,0 +1,14 @@
+---
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: "{{bin_dir}}"
+    state: directory
+
+- name: Test containers
+  ansible.builtin.template:
+    src: alpine.sh.j2
+    dest: "{{bin_dir}}/{{item}}.sh"
+    mode: 0744
+    # owner: "{{ansible_user}}"
+  loop:
+  - alpine
