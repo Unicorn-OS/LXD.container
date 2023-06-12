@@ -6,5 +6,6 @@
     gpu: false
 
   roles:
-  - LXD
-  - test
+  # - LXD
+  # - test
+  - GUI app
