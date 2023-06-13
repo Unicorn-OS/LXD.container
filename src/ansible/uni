@@ -1,12 +1,19 @@
 ---
-- hosts: local #test, local
+- hosts: local
+  roles:
+  - .pre/ansible_lxc_connection
+
+- hosts: local #, test
   vars:
     gui: true
   roles:
   # - LXD
   # - GUI app
 
-  # Test
-  # - .test/LXD
-  - .test/GUI app #
-  # - .test/temp
+# - hosts: test #, local
+#   vars:
+#     gui: true
+#   roles:  
+#   - .test/LXD
+#   - .test/GUI app
+#   - .test/temp
