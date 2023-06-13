@@ -1,4 +1,4 @@
 dependencies:
-  - LXD   # disable to speed up development iteration
+  # - LXD   # disable to speed up development iteration
   # - GUI app/profile/xorg
   - GUI app/profile/xwayland
