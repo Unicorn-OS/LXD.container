@@ -6,19 +6,17 @@ ansible_connection=local
 ansible_user=me
 ansible_become_password=u
 
-[template_profile]
+[template]
 xwaylandTemplate
+waylandTemplate
 
-[template_profile:vars]
+[template:vars]
 ansible_connection=lxd
 
 
-[ubuntu]
-192.168.122.4
+; [remote]
+; 192.168.122.4
 
-[ubuntu:vars]
-ansible_user=me
-ansible_become_password=u
-
-[remote:children]
-ubuntu
+; [remote:vars]
+; ansible_user=me
+; ansible_become_password=u

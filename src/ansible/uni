@@ -1,18 +1,23 @@
 ---
 
-- hosts: local #, test
-  vars:
-    gui: true
+- hosts: local
   roles:
-  # - .pre/ansible_lxc_connection
-  # - LXD
+  - .pre/ansible_lxc_connection
+  - LXD
   - GUI app
 
 - hosts: xwaylandTemplate
   roles:
   - GUI app/profile/xwayland/in container
 
-# - hosts: test #, local
+- hosts: local
+  vars:
+    container: "{{groups['template'][0]}}"
+  roles:
+  - container/stop
+
+
+# - hosts: local
 #   vars:
 #     gui: true
 #   roles:  

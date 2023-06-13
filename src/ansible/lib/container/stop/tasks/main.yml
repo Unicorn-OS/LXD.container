@@ -1,0 +1,6 @@
+---
+- name: Stop container
+  community.general.lxd_container:
+    name: "{{container}}"
+    state: stopped
+    type: container

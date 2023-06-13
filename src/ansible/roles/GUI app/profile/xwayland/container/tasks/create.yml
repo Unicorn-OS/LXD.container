@@ -3,7 +3,7 @@
 # Works! has to be cloud image
 - name: Create a template container
   community.general.lxd_container:
-    name: "{{template_name}}"
+    name: "{{container}}"
     state: started
     source:
       type: image

@@ -1,4 +1,4 @@
 ---
-instance_name: "{{profile_name}}"
-template_name: "{{profile_name}}"
+profile_name: "{{groups['template'][0]}}"
+container: "{{profile_name}}"
 alias: "{{distro}}/{{distro_vers}}{{distro_variant}}"
