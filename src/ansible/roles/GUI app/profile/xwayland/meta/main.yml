@@ -1,0 +1,5 @@
+---
+dependencies:
+  - get
+  - GUI app/profile/xwayland/lxc profile
+  - GUI app/profile/xwayland/container
