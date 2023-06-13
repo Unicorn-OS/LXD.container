@@ -37,5 +37,5 @@ devices:
 
   mygpu:
     type: gpu
-name: try
+name: xwayland
 used_by: []
