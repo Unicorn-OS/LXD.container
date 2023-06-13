@@ -1,6 +1,6 @@
 ---
 
-- name: First container
+- name: container settings
   ansible.builtin.set_fact:
     num: 4
     profile: "x11-no-gpu"
@@ -15,8 +15,7 @@
       type: image
       mode: pull
       server: https://images.linuxcontainers.org
-      # protocol: lxd
-      protocol: simplestreams
+      protocol: simplestreams #lxd
       alias: ubuntu/22.04/cloud
     profiles: "['default', '{{profile}}']"
     wait_for_ipv4_addresses: true
