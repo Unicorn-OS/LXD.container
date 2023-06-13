@@ -1,7 +1,7 @@
 ---
 dependencies:
   # - GUI app
-  - get
+  - GUI app/get
   - .test/common
   - .test/GUI app/xorg
   
