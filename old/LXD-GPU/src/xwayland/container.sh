@@ -17,7 +17,7 @@ in_container(){
     mkdir /run/user/1000
     ln -s /mnt/wayland-socket /run/user/1000/wayland-0
     mkdir /tmp/.X11-unix/
-    ln -s /mnt/wayland1-X2 /tmp/.X11-unix/X1
+    ln -s /mnt/wayland1-X1 /tmp/.X11-unix/X1
 
     cd ~
     echo '''

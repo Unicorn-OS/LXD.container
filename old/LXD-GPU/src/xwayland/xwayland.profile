@@ -24,11 +24,11 @@ devices:
     gid: 1000
     type: proxy
 
-  XWaylandsocket:
+  xwaylandsocket:
     bind: container
     connect: unix:/tmp/.X11-unix/X2
     gid: "1000"
-    listen: unix:/mnt/wayland1-X2
+    listen: unix:/mnt/wayland1-X1
     mode: "0777"
     security.gid: "1000"
     security.uid: "1000"
