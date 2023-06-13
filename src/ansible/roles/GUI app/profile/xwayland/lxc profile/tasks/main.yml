@@ -2,7 +2,7 @@
 
 - name: Create Xwayland GPU accelerated profile
   community.general.lxd_profile:
-    name: "xwayland"
+    name: "{{profile_name}}"
     state: present
     description: Wayland and Xwayland with GPU acceleration
     config:

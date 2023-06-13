@@ -1,1 +1,6 @@
 ---
+- name: run on host
+  ansible.builtin.include_tasks:
+    file: "{{item}}.yaml"
+  list:
+  - create

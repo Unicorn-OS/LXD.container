@@ -1,0 +1,4 @@
+---
+# We named it xwaylandTemplate so you `lxc profile copy` once per instance!
+profile: xwayland
+profile_name: "{{profile}}Template"

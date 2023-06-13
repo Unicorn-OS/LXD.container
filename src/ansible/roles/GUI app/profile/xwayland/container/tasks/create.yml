@@ -1,0 +1,15 @@
+---
+
+# Works! has to be cloud image
+- name: Create a template container
+  community.general.lxd_container:
+    name: "{{template_name}}"
+    state: started
+    source:
+      type: image
+      mode: pull
+      server: https://images.linuxcontainers.org
+      protocol: simplestreams #lxd
+      alias: "{{alias}}"
+    profiles: "['default', '{{profile_name}}']"
+    wait_for_ipv4_addresses: true
