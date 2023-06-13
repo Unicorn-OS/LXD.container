@@ -1,0 +1,7 @@
+---
+- name: python modules for Ansible connection lxd_container
+  ansible.builtin.apt:
+    pkg:
+    - python3-pylxd
+    - python3-lxc
+  become: true
