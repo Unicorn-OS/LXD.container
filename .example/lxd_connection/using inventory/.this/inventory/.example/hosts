@@ -10,5 +10,5 @@ ansible_become_password=u
 mycontainer
 
 [lxc:vars]
-ansible_user=ubuntu
 ansible_connection=lxd
+become_user=ubuntu

@@ -1,0 +1,7 @@
+---
+
+- debug:
+    msg: "Who am I? '{{ lookup('ansible.builtin.env', 'HOME') }}'"
+
+- include_tasks:
+    file: as user.yml

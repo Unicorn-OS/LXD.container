@@ -1,0 +1,14 @@
+---
+
+- debug:
+    msg: "My home is '{{ lookup('ansible.builtin.env', 'HOME') }}'"
+  become_user: ubuntu
+
+
+- name: Create file
+  ansible.builtin.file:
+    state: touch
+    path: "/home/{{become_user}}/foobar"
+    owner: "{{become_user}}"
+    group: "{{become_user}}"
+  become_user: "{{become_user}}"

@@ -5,6 +5,7 @@
     num: 4
     profile: "x11-no-gpu"
     container: test
+    alias: "ubuntu/23.04/cloud"
 
 # Works! has to be cloud image
 - name: Create a container
@@ -16,6 +17,6 @@
       mode: pull
       server: https://images.linuxcontainers.org
       protocol: simplestreams #lxd
-      alias: ubuntu/22.04/cloud
+      alias: "{{alias}}"
     profiles: "['default', '{{profile}}']"
     wait_for_ipv4_addresses: true
