@@ -1,0 +1,6 @@
+---
+- name: Set socket numbers
+  ansible.builtin.set_fact:
+    wayland_socket: "{{1 + offset}}"
+    xserver_socket: "{{2 + offset}}"
+  when: use_weston
