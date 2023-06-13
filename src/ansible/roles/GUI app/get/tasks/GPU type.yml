@@ -1,4 +1,14 @@
 ---
+
+- name: Get GPU
+  get_gpu:
+  register: gpu
+
 - name: Set GPU type
   ansible.builtin.set_fact:
-    gpu_type: "{{'virtio' if ansible_system_vendor == 'QEMU'}}"
+    gpu_type: "{{'virtio' if ansible_system_vendor == 'QEMU' else 'intel' if gpu.hw.intel.integrated }}"
+
+# - debug:
+#     msg: |
+#       discrete: {{ gpu.hw.intel.discrete }} integrated: {{ gpu.hw.intel.integrated }}
+#       {{gpu}}
