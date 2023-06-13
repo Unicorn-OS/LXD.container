@@ -9,4 +9,4 @@
   # Test
   # - .test/LXD
   - .test/GUI app #
-  - .test/temp
+  # - .test/temp

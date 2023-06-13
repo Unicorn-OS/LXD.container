@@ -14,7 +14,7 @@
 
 - name: Run tasks/other.yaml instead of 'main'
   ansible.builtin.include_role:
-    name: GUI app/get/xserver
+    name: get/xserver
 
 - name: Template profile
   ansible.builtin.template:
