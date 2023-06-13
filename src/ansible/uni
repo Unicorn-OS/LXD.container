@@ -3,10 +3,10 @@
   vars:
     gui: true
   roles:
-  - LXD
-  - GUI app
+  # - LXD
+  # - GUI app
 
   # Test
   # - .test/LXD
-  - .test/GUI app
-  # - .test/temp
+  - .test/GUI app #
+  - .test/temp
