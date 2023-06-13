@@ -1,0 +1,27 @@
+---
+
+- name: Create directory for socket
+  ansible.builtin.file:
+    path: "{{item}}"
+    state: directory
+  loop:
+  - /run/user/1000
+  - /tmp/.X11-unix
+
+- name: Link socket from /mnt passthrough
+  ansible.builtin.file:
+    src: "{{item.src}}"
+    dest: "{{item.dest}}"
+    state: link
+  loop:
+  - { src: '/mnt/wayland-socket', dest: '/run/user/1000/wayland-0' }
+  - { src: '/mnt/wayland1-X1', dest: '/tmp/.X11-unix/X1' }
+
+- name: set Display in bashrc
+  ansible.builtin.blockinfile:
+    path: "/home/{{default_user}}/.bashrc"
+    block: |
+      export WAYLAND_DISPLAY=wayland-0
+      export XDG_RUNTIME_DIR=/run/user/1000
+      export DISPLAY=:1
+      export XSOCKET=/tmp/.X11-unix/X1

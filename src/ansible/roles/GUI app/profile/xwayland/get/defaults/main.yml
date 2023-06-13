@@ -1,6 +1,5 @@
 ---
-ubuntu_vers: 22.04
-
-instance_name: "{{profile_name}}"
-template_name: "{{profile_name}}"
-alias: "ubuntu/{{ubuntu_vers}}/cloud"
+default_user: ubuntu
+distro: ubuntu
+distro_vers: 22.04
+distro_variant: "/cloud"

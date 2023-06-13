@@ -8,6 +8,10 @@
   # - LXD
   - GUI app
 
+- hosts: xwaylandTemplate
+  roles:
+  - GUI app/profile/xwayland/in container
+
 # - hosts: test #, local
 #   vars:
 #     gui: true

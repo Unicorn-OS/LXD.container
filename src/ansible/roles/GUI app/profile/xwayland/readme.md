@@ -1,3 +1,6 @@
+# Test
+**Works on Ubuntu 22.04! Try other distros and releases**
+
 # Made by combining devices from these 2 guides:
 - XWaylandsocket: https://blog.simos.info/running-x11-software-in-lxd-containers/
 - wayland-socket: https://blog.swwomm.com/2022/08/lxd-containers-for-wayland-gui-apps.html

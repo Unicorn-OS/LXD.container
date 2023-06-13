@@ -1,0 +1,4 @@
+---
+instance_name: "{{profile_name}}"
+template_name: "{{profile_name}}"
+alias: "{{distro}}/{{distro_vers}}{{distro_variant}}"

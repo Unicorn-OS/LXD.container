@@ -2,5 +2,5 @@
 dependencies:
   - GUI app/get
   - GUI app/profile/xwayland/get
-  - GUI app/profile/xwayland/lxc profile
+  - GUI app/profile/xwayland/profile
   - GUI app/profile/xwayland/container
