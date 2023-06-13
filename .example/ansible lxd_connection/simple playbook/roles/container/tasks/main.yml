@@ -1,0 +1,37 @@
+---
+# from: https://github.com/ansible/ansible/issues/25489#issuecomment-353000212
+
+- name: First container
+  ansible.builtin.set_fact:
+    num: 4
+    profile: "x11-no-gpu"
+    container: test
+
+- name: Create a container
+  community.general.lxd_container:
+    name: "mycontainer"
+    state: started
+    source:
+      type: image
+      mode: pull
+      server: https://images.linuxcontainers.org
+      # protocol: lxd
+      protocol: simplestreams
+      alias: ubuntu/22.04/cloud
+    profiles: "['default', '{{profile}}']"
+    wait_for_ipv4_addresses: true
+
+- name: check python is installed in container
+  delegate_to: mycontainer
+  raw: dpkg -s python3
+  register: python_install_check
+  failed_when: python_install_check.rc not in [0, 1]
+  changed_when: false
+
+- name: install python in container
+  delegate_to: mycontainer
+  raw: apt-get install -y python3
+  when: python_install_check.rc == 1
+
+- debug:
+    msg: "Python: {{python_install_check}}"

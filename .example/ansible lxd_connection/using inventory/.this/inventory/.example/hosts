@@ -1,0 +1,14 @@
+[local]
+localhost
+
+[local:vars]
+ansible_connection=local
+ansible_user=me
+ansible_become_password=u
+
+[lxc]
+mycontainer
+
+[lxc:vars]
+ansible_user=ubuntu
+ansible_connection=lxd
