@@ -6,12 +6,12 @@ ansible_connection=local
 ansible_user=me
 ansible_become_password=u
 
-[fedora]
-192.168.122.84
+[template_profile]
+xwaylandTemplate
 
-[fedora:vars]
-ansible_user=me
-ansible_become_password=u
+[template_profile:vars]
+ansible_connection=lxd
+
 
 [ubuntu]
 192.168.122.4
@@ -20,7 +20,5 @@ ansible_become_password=u
 ansible_user=me
 ansible_become_password=u
 
-
-[test:children]
-; fedora
+[remote:children]
 ubuntu
