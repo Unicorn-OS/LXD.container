@@ -1,7 +1,0 @@
----
-- name: install weston
-  ansible.builtin.apt:
-    pkg:
-      - weston
-      - wlogout
-  become: true
