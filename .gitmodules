@@ -1,0 +1,3 @@
+[submodule "src/.pre/dependency/getGPU"]
+	path = src/.pre/dependency/getGPU
+	url = https://github.com/Unicorn-OS/getGPU.git
