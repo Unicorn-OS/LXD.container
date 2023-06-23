@@ -13,3 +13,4 @@ library: [
 
 # set Inventory
 dynamic_inventory: "{{static_inventory}}"
+test_inventory: true
