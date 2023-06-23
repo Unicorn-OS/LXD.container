@@ -14,19 +14,10 @@
   roles:
   - GUI app/profile/xwayland/in container
 
-# - hosts: localhost
-#   vars:
-#     container: "{{groups['template'][0]}}"
-#     ansible_become_password: u
-#     ansible_user: "{{lookup('ansible.builtin.env', 'USER')}}"
-#   roles:
-#   - container/stop
-
-
-# - hosts: local
-#   vars:
-#     gui: true
-#   roles:  
-#   - .test/LXD
-#   - .test/GUI app
-#   - .test/temp
+- hosts: localhost
+  vars:
+    container: "{{groups['template'][0]}}"
+    ansible_become_password: u
+    ansible_user: "{{lookup('ansible.builtin.env', 'USER')}}"
+  roles:
+  - container/stop
