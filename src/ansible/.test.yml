@@ -4,4 +4,3 @@
   roles:  
   - .test/LXD
   - .test/GUI app
-  - .test/temp
