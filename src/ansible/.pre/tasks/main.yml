@@ -1,5 +1,5 @@
 - include_tasks: ansible.cfg.yml
 - include_tasks: dependency.yml
-- include_tasks: galaxy.yml
+# - include_tasks: galaxy.yml
 - include_tasks: inventory.yml
 - include_tasks: library.yml

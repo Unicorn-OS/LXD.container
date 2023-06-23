@@ -8,5 +8,5 @@
 - name: Copy .default inventory to test 
   ansible.builtin.copy:
     src: "inventory/.example"
-    dest: "{{role_path}}/files/test"
+    dest: "{{role_path}}/files/inventory/test"
   when: test_inventory

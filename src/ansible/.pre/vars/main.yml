@@ -1,5 +1,5 @@
 # Inventory
-static_inventory: ".pre/inventory/test/hosts"
+static_inventory: ".pre/files/inventory/test/hosts"
 
 # Names
 depends: ".depends"
