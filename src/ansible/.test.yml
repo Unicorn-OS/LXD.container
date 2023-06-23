@@ -1,6 +1,0 @@
-- hosts: local
-  vars:
-    gui: true
-  roles:  
-  - .test/LXD
-  - .test/GUI app

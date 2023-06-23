@@ -1,0 +1,11 @@
+- debug:
+    msg: "Hello gpu"
+
+- name: Get GPU
+  get_gpu:
+  register: gpu
+
+- debug:
+    msg: "This {{gpu}}"
+
+#     gpu_type: "{{'virtio' if ansible_system_vendor == 'QEMU' else 'intel' if gpu.hw.intel.integrated }}"
