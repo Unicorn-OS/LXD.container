@@ -1,8 +1,0 @@
-dependency = [
-    {   "name": "getGPU"
-        "repo": "https://github.com/Unicorn-OS/getGPU.git"
-        "ansible_module": [
-            "src/library/get_gpu.py"
-        ]
-    },
-]

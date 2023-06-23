@@ -1,0 +1,15 @@
+# Change this file to add dependency artifacts, repos, & roles!
+repo: [
+  { repo: "git@github.com:Unicorn-OS/getGPU.git", name: "getGPU"},
+  ]
+
+role: [
+#  { git: "Uni.os.default", name: "uni", path: "src/ansible/roles/uni"},
+  ]
+
+library: [
+  { git: "getGPU", name: "get_gpu.py", path: "src/ansible/library/get_gpu.py"},
+  ]
+
+# set Inventory
+dynamic_inventory: "{{static_inventory}}"

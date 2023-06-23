@@ -1,11 +1,3 @@
-dependency(){
-if [[ -d dependency ]]; then
-cd dependency
-./init
-cd -
-fi
-}
-
 setup_inventory(){
 echo "inventory/test" >.this/.gitignore
 
@@ -15,21 +7,8 @@ cd .this/inventory/
 cd -
 }
 
-update(){
-if [ -f "update.yml" ]; then
-    ansible-playbook update.yml
-fi
-}
-
-test(){
-ansible -m ping test
-}
-
 main(){
-dependency
 setup_inventory
-update
-#test
 }
 
 main

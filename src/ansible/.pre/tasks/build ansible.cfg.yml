@@ -1,0 +1,24 @@
+- name: gitignore ansible.cfg
+  ansible.builtin.lineinfile:
+    path: "{{item}}"
+    regexp: "^ansible.cfg"
+    line: "ansible.cfg"
+    create: true
+  loop:
+  - "{{role_path}}/.gitignore"
+  - "{{playbook_dir}}/.gitignore"
+
+- name: build ansible.cfg
+  ansible.builtin.blockinfile:
+    path: "{{role_path}}/ansible.cfg"
+    create: true
+    block: |
+      [defaults]
+      inventory = {{dynamic_inventory}}
+      roles_path = {{role_dir}}
+
+- name: link ansible.cfg
+  ansible.builtin.file:
+    src: "{{role_path}}/ansible.cfg"
+    dest: "{{playbook_dir}}/ansible.cfg"
+    state: link
