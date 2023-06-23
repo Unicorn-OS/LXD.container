@@ -1,5 +1,6 @@
 ---
-
+# Creates a LXD template for xwayland!
+# in 3 plays:
 - hosts: local
   roles:
   - .pre/ansible_lxc_connection
