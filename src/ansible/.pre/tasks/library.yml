@@ -1,0 +1,14 @@
+- name: create dirs
+  ansible.builtin.file:
+    path: "{{playbook_dir}}/library"
+    state: directory
+  loop:
+  - "{{role_dir}}"
+
+
+- name: link Libraries
+  ansible.builtin.file:
+    src: "{{git_dir}}/{{item.git}}/{{item.path}}/{{item.name}}"
+    dest: "{{playbook_dir}}/library/"
+    state: link
+  loop: "{{library}}"

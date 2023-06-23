@@ -1,1 +1,0 @@
-../../.pre/dependency/getGPU/src/library/get_gpu.py

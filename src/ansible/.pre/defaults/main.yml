@@ -8,7 +8,7 @@ role: [
   ]
 
 library: [
-  { git: "getGPU", name: "get_gpu.py", path: "src/ansible/library/get_gpu.py"},
+  { git: "getGPU", name: "get_gpu.py", path: "src/ansible/library"},
   ]
 
 # set Inventory
