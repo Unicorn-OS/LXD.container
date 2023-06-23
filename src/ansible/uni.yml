@@ -17,6 +17,8 @@
 - hosts: localhost
   vars:
     container: "{{groups['template'][0]}}"
+    ansible_become_password: u
+    ansible_user: "{{lookup('ansible.builtin.env', 'USER')}}"
   roles:
   - container/stop
 
