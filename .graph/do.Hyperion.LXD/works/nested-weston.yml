@@ -1,0 +1,45 @@
+config:
+  boot.autostart: false
+  user.user-data: |
+    #cloud-config
+    write_files:
+    - path: /usr/local/bin/mystartup.sh
+      permissions: 0755
+      content: |
+        #!/bin/sh
+        uid=$(id -u)
+        run_dir=/run/user/$uid
+        mkdir -p $run_dir && chmod 700 $run_dir && chown $uid:$uid $run_dir
+        ln -sf /mnt/wayland-socket $run_dir/wayland-0
+    - path: /usr/local/etc/mystartup.service
+      content: |
+        [Unit]
+        After=local-fs.target
+        [Service]
+        Type=oneshot
+        ExecStart=/usr/local/bin/mystartup.sh
+        [Install]
+        WantedBy=default.target
+    runcmd:
+    - mkdir -p /home/ubuntu/.config/systemd/user/default.target.wants
+    - ln -s /usr/local/etc/mystartup.service /home/ubuntu/.config/systemd/user/default.target.wants/mystartup.service
+    - ln -s /usr/local/etc/mystartup.service /home/ubuntu/.config/systemd/user/mystartup.service
+    - chown -R ubuntu:ubuntu /home/ubuntu
+    - echo 'export WAYLAND_DISPLAY=wayland-0' >> /home/ubuntu/.profile
+description: Basic Wayland Jammy
+devices:
+  eth0:
+    name: eth0
+    network: lxdbr0
+    type: nic
+  root:
+    path: /
+    pool: default
+    type: disk
+  wayland-socket:
+    bind: container
+    connect: unix:/run/user/1000/wayland-1
+    listen: unix:/mnt/wayland-socket
+    uid: 1000
+    gid: 1000
+    type: proxy
