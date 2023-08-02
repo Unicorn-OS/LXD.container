@@ -10,7 +10,7 @@
 # Testing
 - name: in Container
   hosts: test_GUI_app_in_LXC
-  tags: [ test ]
+  tags: [ test, xclock, xeyes ]
   roles:
   - GUI app/XWayland/in Container/xclock & eyes
  
