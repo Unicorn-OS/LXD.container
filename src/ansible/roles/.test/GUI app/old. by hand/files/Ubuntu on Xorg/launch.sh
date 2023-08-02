@@ -1,3 +1,5 @@
+profile=x11-no-gpu
+
 launch(){
   lxc launch ubuntu:22.04 --profile default --profile x11-no-gpu mycontainer
 }
