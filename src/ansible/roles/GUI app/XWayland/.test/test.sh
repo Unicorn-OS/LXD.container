@@ -1,9 +1,12 @@
 # Create & Test
 start(){
+    # Start Container
     ansible-playbook test.xwayland.yml --tags start
 }
 
 test(){
+    # Start Container & run Xeyes in Xwayland!
+    start
     ansible-playbook test.xwayland.yml --tags test
 }
 
@@ -17,4 +20,4 @@ delete(){
 }
 
 
-start
+test
