@@ -1,4 +1,4 @@
-# Change this if you want GPU Acceleration in Container!
+# Overwrite this in vars/main.yml if you want GPU Acceleration!
 GPU: false
 
 # Shared between both Host & Container! in Xwayland & @unix socket passthrough in container.profile
