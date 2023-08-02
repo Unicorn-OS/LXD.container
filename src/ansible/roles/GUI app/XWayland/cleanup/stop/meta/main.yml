@@ -1,3 +1,2 @@
 dependencies:
   - GUI app/XWayland/get
-  - GUI app/XWayland/cleanup/xwayland
