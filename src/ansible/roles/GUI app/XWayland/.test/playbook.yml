@@ -22,3 +22,12 @@
   tags: [ delete, never ]
   roles:
   - GUI app/XWayland/cleanup/delete
+
+
+- name: Debug
+  hosts: localhost
+  tags: [ debug ]
+  vars:
+    GPU: true
+  roles:
+  - GUI app/XWayland/.test/debug
