@@ -1,5 +1,5 @@
-# Overwrite this in vars/main.yml if you want GPU Acceleration!
-GPU: false
+# Overwrite this in vars/main.yml if you want to *Disable GPU Acceleration.
+GPU: true
 
 # Shared between both Host & Container! in Xwayland & @unix socket passthrough in container.profile
 # To start Multiple containers: use a loop and increment this number each time!
