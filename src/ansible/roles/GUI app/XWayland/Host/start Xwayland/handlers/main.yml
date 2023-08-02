@@ -1,4 +1,4 @@
 - name: Touch xwayland.running
   ansible.builtin.file:
-    path: "{{ config_dir }}/tmp/{{screen_name}}.running"
+    path: "{{ screen_proc_dir }}/{{screen_name}}.running"
     state: touch
