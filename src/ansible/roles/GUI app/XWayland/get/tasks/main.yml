@@ -1,0 +1,9 @@
+- name: Include vars GPU
+  ansible.builtin.include_vars:
+    file: GPU.yml
+  when: GPU
+
+- name: Include vars no GPU
+  ansible.builtin.include_vars:
+    file: no GPU.yml
+  when: not GPU

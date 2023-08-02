@@ -1,2 +1,5 @@
+# Change this if you want GPU Acceleration in Container!
+GPU: false
+
 # Shared between both Host & Container! in Xwayland & @unix socket passthrough in container.profile
 display_number: 4

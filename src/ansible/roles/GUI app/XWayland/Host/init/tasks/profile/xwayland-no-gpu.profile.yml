@@ -1,10 +1,10 @@
 - name: Create xwayland-no-gpu.profile
   community.general.lxd_profile:
-    name: xwayland-no-gpu.profile
+    name: "{{profile_name}}"
     state: present
     description: unaccelerated Xorg
     config:
-      environment.DISPLAY: :{{ display_number }}
+      environment.DISPLAY: :0
       user.user-data: |
         #cloud-config
         runcmd:
@@ -13,10 +13,10 @@
           - x11-apps
           - mesa-utils
     devices:
-      X{{ display_number }}:
+      X0:
         bind: container
         connect: unix:@/tmp/.X11-unix/X{{ display_number }}
-        listen: unix:@/tmp/.X11-unix/X{{ display_number }}
+        listen: unix:@/tmp/.X11-unix/X0
         security.gid: "1000"
         security.uid: "1000"
         type: proxy

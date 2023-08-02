@@ -1,7 +1,7 @@
 - name: Setup host & container profile
   hosts: localhost
   roles:
-  - GUI app/XWayland
+  - GUI app/XWayland/get
   - GUI app/XWayland/Host
   - GUI app/XWayland/Container
 

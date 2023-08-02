@@ -1,3 +1,1 @@
-profile_name: xwayland-no-gpu
-
 config_dir: "{{ansible_env.HOME}}/.uni/hyperion/container/lxd/gui-app"

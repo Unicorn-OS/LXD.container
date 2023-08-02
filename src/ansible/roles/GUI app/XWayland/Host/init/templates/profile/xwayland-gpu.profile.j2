@@ -9,7 +9,7 @@ config:
     packages:
       - x11-apps
       - mesa-utils
-description: unaccelerated Xorg for XWayland
+description: GPU Accelerated Xorg for XWayland
 devices:
   X{{ display_number }}:
     bind: container
@@ -18,5 +18,7 @@ devices:
     security.gid: "1000"
     security.uid: "1000"
     type: proxy
+  mygpu:
+    type: gpu
 name: {{ profile_name }}
 used_by: []
