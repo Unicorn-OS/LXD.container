@@ -2,7 +2,7 @@
 GPU: false
 
 # Shared between both Host & Container! in Xwayland & @unix socket passthrough in container.profile
-# Make this a dynamic function `get_num()`!
+# To start Multiple containers: use a loop and increment this number each time!
 display_number: 4
 
 # create a LXC profile from template/{{name}}.j2?
