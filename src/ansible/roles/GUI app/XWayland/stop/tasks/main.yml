@@ -17,4 +17,3 @@
 - name: Kill Xwayland
   ansible.builtin.shell: killall Xwayland
   changed_when: false
-  # become: true

@@ -1,14 +1,15 @@
-# - hosts: localhost
-#   roles:
-#   - GUI app/XWayland
-#   - GUI app/XWayland/Host
-#   - GUI app/XWayland/Container
-
-# - name: in Container
-#   hosts: xwayland
-#   roles:
-#   - GUI app/XWayland/in Container
-
-- hosts: localhost
+- name: Setup host & container profile
+  hosts: localhost
   roles:
-  - GUI app/XWayland/stop
+  - GUI app/XWayland
+  - GUI app/XWayland/Host
+  - GUI app/XWayland/Container
+
+- name: in Container
+  hosts: xwayland
+  roles:
+  - GUI app/XWayland/in Container
+
+
+# - name: stop container & xwayland
+#   import_playbook: "{{playbook_dir}}/roles/GUI app/XWayland/.test/stop.yml"
