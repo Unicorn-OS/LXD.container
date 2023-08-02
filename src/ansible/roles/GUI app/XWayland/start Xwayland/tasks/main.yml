@@ -1,6 +1,6 @@
 # Start XWayland in Screen
 # https://www.google.com/search?q=ansible+run+command+in+screen
-# try: https://stackoverflow.com/questions/64391742/screen-command-for-ansible
+# works!: https://stackoverflow.com/questions/64391742/screen-command-for-ansible
 
 - name: Start XWayland in Screen
   ansible.builtin.shell: "screen -mdSA xwayland bash -c 'Xwayland -retro -noreset :4'"

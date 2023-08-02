@@ -1,4 +1,4 @@
-container_name: testXwayland
+container_name: "test-{{ profile_name }}"
 
 # Make this a dynamic function `get_num()`!
 container_num: 0

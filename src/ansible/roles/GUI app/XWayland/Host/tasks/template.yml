@@ -19,3 +19,4 @@
   args:
     chdir: "{{ config_dir }}"
     creates: somelog.txt
+  changed_when: false
