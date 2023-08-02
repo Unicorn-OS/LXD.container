@@ -17,7 +17,7 @@
 
 - name: allow non-root user
   user:
-    name: '{{ansible_user}}'
+    name: '{{ ansible_env.USER }}'
     groups: lxd
     append: yes
   become: true

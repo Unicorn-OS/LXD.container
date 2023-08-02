@@ -5,7 +5,7 @@
   ansible.builtin.file:
     path: "{{profile_dir}}"
     state: directory
-    owner: "{{ansible_user}}"
+    owner: "{{ ansible_env.USER }}"
   become: true
 
 - name: set dynamically

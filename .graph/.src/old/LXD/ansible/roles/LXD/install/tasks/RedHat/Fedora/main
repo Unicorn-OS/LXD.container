@@ -19,7 +19,7 @@
 
 - name: Add user to lxd group
   ansible.builtin.user:
-    name: "{{ansible_user}}"
+    name: "{{ ansible_env.USER }}"
     groups: lxd
     append: yes
   become: true

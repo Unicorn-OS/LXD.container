@@ -1,5 +1,7 @@
+# the {{display_num}} in `environment.DISPLAY: :4`, `devices:` and `connect: & listen:` have to all match up! This is equal to your display to start `Xwayland`` on Host
+
 config:
-  environment.DISPLAY: :0
+  environment.DISPLAY: :4
   user.user-data: |
     #cloud-config
     runcmd:
@@ -9,12 +11,12 @@ config:
       - mesa-utils
 description: unaccelerated Xorg
 devices:
-  X0:
+  X4:
     bind: container
-    connect: unix:@/tmp/.X11-unix/X0
-    listen: unix:@/tmp/.X11-unix/X0
+    connect: unix:@/tmp/.X11-unix/X4
+    listen: unix:@/tmp/.X11-unix/X4
     security.gid: "1000"
     security.uid: "1000"
     type: proxy
-name: fix-x11-no-gpu
+name: xwayland-x11-no-gpu
 used_by: []

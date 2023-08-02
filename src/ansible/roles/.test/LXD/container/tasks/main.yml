@@ -1,10 +1,7 @@
----
-
 - name: Test containers
   ansible.builtin.template:
     src: alpine.sh.j2
     dest: "{{bin_dir}}/{{item}}.sh"
     mode: 0744
-    # owner: "{{ansible_user}}"
   loop:
   - alpine

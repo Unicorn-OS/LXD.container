@@ -1,0 +1,16 @@
+- name: Create config_dir
+  ansible.builtin.file:
+    path: "{{config_dir}}"
+    state: directory
+
+- name: Template Xwayland start
+  ansible.builtin.template:
+    src: start-xwayland.sh.j2
+    dest: "{{config_dir}}"
+    mode: '0744'  # is executable
+
+- name: Template Container Profile
+  ansible.builtin.template:
+    src: xwayland-no-gpu.profile.j2
+    dest: "{{config_dir}}"
+    mode: '0644'

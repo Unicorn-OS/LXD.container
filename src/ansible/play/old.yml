@@ -1,0 +1,20 @@
+# Creates a LXD template for xwayland!
+# in 3 plays:
+- hosts: localhost
+  vars:
+    ansible_become_password: u
+  roles:
+  - collection/ansible_lxc_connection
+  - LXD
+  - GUI app/.old
+
+- hosts: xwaylandTemplate
+  roles:
+  - GUI app/profile/xwayland/in container
+
+- hosts: localhost
+  vars:
+    container: "{{groups['template'][0]}}"
+    ansible_become_password: u
+  roles:
+  - container/stop
