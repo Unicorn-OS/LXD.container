@@ -8,3 +8,8 @@
     chdir: "{{config_dir}}"
     creates: xwayland.running
   notify: Touch xwayland.running
+
+- debug:
+    msg: |
+      To run this manually, use:
+        `Xwayland -retro -noreset :{{display_number}}`

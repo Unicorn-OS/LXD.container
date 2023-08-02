@@ -1,8 +1,8 @@
-- name: Create GPU accelerated Xorg profile
+- name: Create xwayland-no-gpu.profile
   community.general.lxd_profile:
-    name: "{{profile_name}}"
+    name: "{{ profile_name }}"
     state: present
-    description: GPU accelerated Xorg
+    description: unaccelerated Xorg
     config:
       environment.DISPLAY: :0
       user.user-data: |
@@ -20,5 +20,3 @@
         security.gid: "1000"
         security.uid: "1000"
         type: proxy
-      mygpu:
-        type: gpu

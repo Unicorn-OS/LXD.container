@@ -1,5 +1,5 @@
 - name: Setup host & container profile
-  tags: run, never
+  tags: start
   hosts: localhost
   roles:
   - GUI app/XWayland/get
@@ -7,13 +7,13 @@
   - GUI app/XWayland/Container
 
 - name: in Container
-  tags: run, never
+  tags: start
   hosts: xwayland
   roles:
   - GUI app/XWayland/in Container
 
 
 - hosts: localhost
-  tags: stop, never
+  tags: [ stop, never ]
   roles:
   - GUI app/XWayland/stop

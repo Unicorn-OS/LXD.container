@@ -1,9 +1,18 @@
-- name: Include vars GPU
+- name: Include GPU vars
   ansible.builtin.include_vars:
     file: GPU.yml
   when: GPU
 
-- name: Include vars no GPU
+- name: Include no GPU vars
   ansible.builtin.include_vars:
     file: no GPU.yml
   when: not GPU
+
+- name: Include Host & Container vars
+  ansible.builtin.include_vars:
+    dir: "{{ role_path | dirname }}/{{ item }}"
+    extensions:
+      - 'yml'
+  loop:
+  - "Host/vars"
+  - "Container/vars"

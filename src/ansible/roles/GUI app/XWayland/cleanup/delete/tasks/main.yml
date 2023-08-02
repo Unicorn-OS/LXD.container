@@ -1,0 +1,9 @@
+- name: Delete container
+  community.general.lxd_container:
+    name: "{{container_name}}{{container_num}}"
+    state: absent
+
+- name: Delete profile
+  community.general.lxd_profile:
+    name: "{{ profile_name }}"
+    state: absent
