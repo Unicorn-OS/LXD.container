@@ -16,4 +16,9 @@
 - hosts: localhost
   tags: [ stop, never ]
   roles:
-  - GUI app/XWayland/stop
+  - GUI app/XWayland/cleanup/stop
+
+- hosts: localhost
+  tags: [ delete, never ]
+  roles:
+  - GUI app/XWayland/cleanup/delete
