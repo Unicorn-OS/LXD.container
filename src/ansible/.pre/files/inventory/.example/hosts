@@ -11,10 +11,3 @@ waylandTemplate
 
 [template:vars]
 ansible_connection=lxd
-
-
-; [remote]
-; 192.168.122.4
-
-; [remote:vars]
-; ansible_become_password=u

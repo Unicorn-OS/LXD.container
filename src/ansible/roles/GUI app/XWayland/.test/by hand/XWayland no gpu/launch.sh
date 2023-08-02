@@ -1,4 +1,5 @@
-profile=xwayland-x11-no-gpu
+profile_name=xwayland-no-gpu0
+container_name=test-$profile_name
 
 # run on Host
 # 1. Login to Host as "Ubuntu Wayland"!
@@ -21,11 +22,11 @@ get_new_socket(){
 }
 
 container_launch(){
-    lxc launch ubuntu:22.04 --profile default --profile xwayland-x11-no-gpu mycontainer1
+    lxc launch ubuntu:22.04 --profile default --profile $profile_name $container_name
 }
 
 container_connect(){
-    lxc exec mycontainer1 -- sudo -u ubuntu -i
+    lxc exec $container_name -- sudo -u ubuntu -i
 }
 
 container_install(){

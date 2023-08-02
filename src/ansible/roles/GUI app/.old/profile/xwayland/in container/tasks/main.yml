@@ -1,5 +1,3 @@
----
-
 - name: Create directory for socket
   ansible.builtin.file:
     path: "{{item}}"

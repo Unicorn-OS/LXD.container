@@ -10,7 +10,7 @@
 
 - hosts: xwaylandTemplate
   roles:
-  - GUI app/profile/xwayland/in container
+  - GUI app/.old/profile/xwayland/in container
 
 - hosts: localhost
   vars:

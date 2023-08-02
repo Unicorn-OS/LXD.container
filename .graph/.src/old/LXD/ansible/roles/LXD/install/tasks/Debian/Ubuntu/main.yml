@@ -1,7 +1,5 @@
----
 - name: Install 
   ansible.builtin.apt:
     pkg:
-    - foo
-    - foo-tools
+    - ssh
   become: true

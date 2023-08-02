@@ -1,1 +1,12 @@
-- name: Xeyes
+- name: Touch Hello Container
+  ansible.builtin.file:
+    path: "/home/ubuntu/Hello-Container"
+    state: touch
+
+- name: Install screen & xapps
+  ansible.builtin.apt:
+    pkg:
+    - screen
+    - x11-apps
+
+# - name: Xeyes

@@ -1,0 +1,16 @@
+# Shuts down container and stops xwayland!
+
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_vars_module.html
+
+- name: Include all .json and .jsn files in vars/all and all nested directories (2.3)
+  ansible.builtin.include_vars:
+    dir: GUI app/Xwayland/Container/vars
+    extensions:
+      - 'yml'
+
+- name: Delete container
+  community.general.lxd_container:
+    name: "{{container_name}}{{container_num}}"
+    state: "{{ state }}"
+  notify:
+  - Stop Xwayland

@@ -1,6 +1,10 @@
-- hosts: localhost
+# - hosts: localhost
+#   roles:
+#   - GUI app/XWayland
+#   - GUI app/XWayland/Host
+#   - GUI app/XWayland/Container
+
+- name: in Container
+  hosts: xwayland
   roles:
-  - GUI app/XWayland
-  - GUI app/XWayland/Host
-  - GUI app/XWayland/Container
-  - GUI app/XWayland/start Xwayland
+  - GUI app/XWayland/in Container

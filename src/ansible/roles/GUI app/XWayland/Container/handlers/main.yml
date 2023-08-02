@@ -1,0 +1,9 @@
+- name: Add LXD container to inventory
+  ansible.builtin.blockinfile:
+    path: "{{ playbook_dir }}"
+    block: |
+      [{{ profile_name }}]
+      {{container_name}}
+
+      [{{ profile_name }}:vars]
+      ansible_connection=lxd

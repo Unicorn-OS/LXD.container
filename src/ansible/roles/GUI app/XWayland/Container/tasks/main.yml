@@ -10,3 +10,5 @@
       alias: "{{ container_image }}"
     profiles: "['default', '{{ profile_name }}']"
     wait_for_ipv4_addresses: true
+  notify:
+  - Add LXD container to inventory
