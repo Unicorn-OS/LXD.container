@@ -1,0 +1,21 @@
+- name: Template Container Profile
+  ansible.builtin.template:
+    src: "profile/{{ profile_name }}.profile.j2"
+    dest: "{{ config_dir }}/{{ profile_name }}.profile"
+    mode: '0644'
+
+- name: Create XWayland profile
+  community.general.lxd_profile:
+    name: "{{ profile_name }}"
+    state: present
+
+# Edit profile with stdin
+# >Alternatively, you can create a YAML file (for example, profile.yaml) with the configuration and write the configuration to the profile with the following command:
+# >`lxc profile edit <profile_name> < profile.yaml"`
+# https://documentation.ubuntu.com/lxd/en/stable-5.0/profiles/
+
+- name: Edit profile with stdin
+  ansible.builtin.shell: "lxc profile edit {{ profile_name }} < {{ profile_name }}.profile"
+  args:
+    chdir: "{{ config_dir }}"
+    creates: somelog.txt

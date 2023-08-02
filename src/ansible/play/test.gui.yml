@@ -1,3 +1,4 @@
-- hosts: local
+- hosts: localhost
   roles:
-  - GUI app/Xwayland
+  - GUI app/XWayland
+  - GUI app/XWayland/Host

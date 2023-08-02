@@ -9,8 +9,9 @@
     dest: "{{config_dir}}"
     mode: '0744'  # is executable
 
-- name: Template Container Profile
-  ansible.builtin.template:
-    src: xwayland-no-gpu.profile.j2
-    dest: "{{config_dir}}"
-    mode: '0644'
+- name: profile template
+  ansible.builtin.include_tasks: template.yml
+
+# OR
+# - name: profile include
+#   ansible.builtin.include_tasks: profile/inc.yml

@@ -1,0 +1,6 @@
+- name: include profiles
+  ansible.builtin.include_tasks:
+    file: "profile/{{item}}.yml"
+  loop:
+  - xwayland-gpu.profile
+  - xwayland-no-gpu.profile

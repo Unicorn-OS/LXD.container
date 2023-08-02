@@ -1,5 +1,3 @@
----
-
 - name: Create GPU accelerated Xorg profile
   community.general.lxd_profile:
     name: "x11-gpu-{{ gpu_type }}"

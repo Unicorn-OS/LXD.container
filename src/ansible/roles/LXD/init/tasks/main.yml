@@ -1,5 +1,3 @@
----
-
 - name: Template preseed file
   ansible.builtin.template:
     src: basic.cfg.j2
