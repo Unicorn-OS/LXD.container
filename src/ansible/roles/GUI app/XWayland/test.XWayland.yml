@@ -3,3 +3,4 @@
   - GUI app/XWayland
   - GUI app/XWayland/Host
   - GUI app/XWayland/Container
+  - GUI app/XWayland/start Xwayland

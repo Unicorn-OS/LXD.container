@@ -3,10 +3,10 @@
     path: "{{config_dir}}"
     state: directory
 
-- name: Template Xwayland start
+- name: Template Xwayland
   ansible.builtin.template:
     src: start-xwayland.sh.j2
-    dest: "{{config_dir}}"
+    dest: "{{config_dir}}/start-xwayland.sh"
     mode: '0744'  # is executable
 
 - name: profile template

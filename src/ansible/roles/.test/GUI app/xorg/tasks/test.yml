@@ -1,5 +1,3 @@
----
-
 - name: xeyes
   ansible.builtin.lineinfile:
     path: "{{bin_dir}}/xeyes{{num}}"
