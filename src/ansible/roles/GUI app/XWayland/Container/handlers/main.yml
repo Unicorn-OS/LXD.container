@@ -3,8 +3,8 @@
     create: true
     path: "{{ playbook_dir }}/hosts"
     block: |
-      [test-lxc-gui-app]
+      [{{ host_group_name }}]
       {{ container_name }}
 
-      [test-lxc-gui-app:vars]
+      [{{ host_group_name }}:vars]
       ansible_connection=lxd

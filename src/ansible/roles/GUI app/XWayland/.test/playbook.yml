@@ -7,7 +7,7 @@
 
 - name: in Container
   tags: [ start, test ]
-  hosts: test-lxc-gui-app
+  hosts: test_GUI_app_in_LXC
   roles:
   - GUI app/XWayland/in Container
 
