@@ -3,7 +3,7 @@
 # works!: https://stackoverflow.com/questions/64391742/screen-command-for-ansible
 
 - name: Start XWayland in Screen
-  ansible.builtin.shell: "screen -mdSA xwayland bash -c 'Xwayland -retro -noreset :4'"
+  ansible.builtin.shell: "screen -mdSA {{screen_name}} bash -c 'Xwayland -retro -noreset :4'"
   args:
     chdir: "{{config_dir}}"
     creates: xwayland.running
