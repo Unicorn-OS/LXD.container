@@ -2,6 +2,7 @@
 GPU: false
 
 # Shared between both Host & Container! in Xwayland & @unix socket passthrough in container.profile
+# Make this a dynamic function `get_num()`!
 display_number: 4
 
 # create a LXC profile from template/{{name}}.j2?

@@ -1,0 +1,4 @@
+- name: Touch connection.running
+  ansible.builtin.file:
+    path: "{{ screen_proc_dir }}/{{ connection_screen_name }}.running"
+    state: touch

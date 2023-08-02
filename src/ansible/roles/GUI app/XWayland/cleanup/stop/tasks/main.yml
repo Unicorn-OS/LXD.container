@@ -2,5 +2,5 @@
 
 - name: Stop container
   community.general.lxd_container:
-    name: "{{container_name}}{{container_num}}"
+    name: "{{ container_name }}{{ display_number }}"
     state: stopped

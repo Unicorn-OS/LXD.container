@@ -6,7 +6,7 @@
     path: "{{ playbook_dir }}/hosts"
     block: |
       [{{ host_group_name }}]
-      {{ container_name }}{{ container_num }}
+      {{ container_name }}{{ display_number }}
 
       [{{ host_group_name }}:vars]
       ansible_connection=lxd

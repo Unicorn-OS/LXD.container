@@ -14,11 +14,11 @@
   roles:
   - GUI app/XWayland/in Container/xclock & eyes
  
-  name: connect to Container
+- name: connect to Container
   hosts: localhost
-  tags: [ test ]
+  tags: [ test, connect ]
   roles:
-  - GUI app/XWayland/in Container/connect
+  - GUI app/XWayland/Container/connect
 
 
 # Stop & Cleanup
