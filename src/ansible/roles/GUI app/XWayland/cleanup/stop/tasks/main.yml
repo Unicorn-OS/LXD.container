@@ -4,12 +4,3 @@
   community.general.lxd_container:
     name: "{{container_name}}{{container_num}}"
     state: stopped
-
-- name: Kill Xwayland
-  ansible.builtin.shell: killall Xwayland
-  changed_when: false
-
-- name: Delete xwayland.running tmp file
-  ansible.builtin.file:
-    path: "{{ config_dir }}/xwayland.running"
-    state: absent
