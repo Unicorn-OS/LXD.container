@@ -11,7 +11,7 @@
   ansible.builtin.shell: "screen -mdSA {{screen_name}} bash -c 'Xwayland -retro -noreset :4'"
   args:
     chdir: "{{ screen_proc_dir }}"
-    creates: xwayland.running
+    creates: "{{screen_name}}.running"
   notify: Touch xwayland.running
 
 - debug:

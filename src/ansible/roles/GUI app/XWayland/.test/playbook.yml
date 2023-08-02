@@ -1,19 +1,28 @@
+# Start
 - name: Setup host & container profile
   hosts: localhost
   tags: [ start ]
   roles:
   - GUI app/XWayland/Host
-  - GUI app/XWayland/Container
+  - GUI app/XWayland/Container/create
 
+
+# Testing
 - name: in Container
   hosts: test_GUI_app_in_LXC
   tags: [ test ]
   roles:
-  - GUI app/XWayland/in Container
-
-
-- name: Cleanup
+  - GUI app/XWayland/in Container/xclock & eyes
+ 
+  name: connect to Container
   hosts: localhost
+  tags: [ test ]
+  roles:
+  - GUI app/XWayland/in Container/connect
+
+
+# Stop & Cleanup
+- hosts: localhost
   tags: [ stop, never ]
   roles:
   - GUI app/XWayland/cleanup/stop
@@ -24,6 +33,7 @@
   - GUI app/XWayland/cleanup/delete
 
 
+# Debug
 - name: Debug
   hosts: localhost
   tags: [ debug ]

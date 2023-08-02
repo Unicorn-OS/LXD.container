@@ -1,0 +1,7 @@
+
+- name: Connect to container Screen
+  ansible.builtin.shell: "screen -mdSA {{ screen_name }} bash -c '{{ connect_command }}'"
+  args:
+    chdir: "{{ screen_proc_dir }}"
+    creates: "{{screen_name}}.running"
+  notify: Touch xwayland.running

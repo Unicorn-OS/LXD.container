@@ -5,4 +5,6 @@ container_num: 0
 
 container_image: ubuntu/22.04/cloud
 
+connect_command: "lxc exec {{ container_name }}{{ container_num }} -- sudo -u ubuntu -i"
+
 host_group_name: test_GUI_app_in_LXC
