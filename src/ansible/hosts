@@ -1,5 +1,0 @@
-[xwayland]
-test-xwayland-no-gpu0
-
-[xwayland:vars]
-ansible_connection=lxd
