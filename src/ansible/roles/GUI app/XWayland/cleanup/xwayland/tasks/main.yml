@@ -4,5 +4,5 @@
 
 - name: Delete xwayland.running tmp file
   ansible.builtin.file:
-    path: "{{ config_dir }}/xwayland.running"
+    path: "{{ config_dir }}/tmp/{{screen_name}}.running"
     state: absent
