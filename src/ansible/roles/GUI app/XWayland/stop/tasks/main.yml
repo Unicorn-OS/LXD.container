@@ -17,3 +17,8 @@
 - name: Kill Xwayland
   ansible.builtin.shell: killall Xwayland
   changed_when: false
+
+- name: Delete xwayland.running
+  ansible.builtin.file:
+    path: "{{ config_dir }}/xwayland.running"
+    state: absent
