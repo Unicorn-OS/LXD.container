@@ -1,3 +1,3 @@
 dependencies:
-  - XWayland/Host/init
-  - XWayland/Host/start Xwayland
+  - GUI app/XWayland/Host/init
+  - GUI app/XWayland/Host/start Xwayland

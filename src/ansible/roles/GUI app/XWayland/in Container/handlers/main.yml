@@ -1,0 +1,9 @@
+- name: Touch xclock.running
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/xclock.running"
+    state: touch
+
+- name: Touch xeyes.running
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/xeyes.running"
+    state: touch

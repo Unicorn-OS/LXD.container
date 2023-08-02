@@ -1,12 +1,22 @@
-- name: Touch Hello Container
-  ansible.builtin.file:
-    path: "/home/ubuntu/Hello-Container"
-    state: touch
-
 - name: Install screen & xapps
   ansible.builtin.apt:
     pkg:
     - screen
     - x11-apps
 
-# - name: Xeyes
+- name: Start Xclock in Screen
+  ansible.builtin.shell: "screen -mdSA xclock bash -c 'xclock'"
+  args:
+    chdir: "{{ ansible_env.HOME }}"
+    creates: xclock.running
+  notify: Touch xclock.running
+
+- name: Start Xeyes in Screen
+  ansible.builtin.shell: "screen -mdSA xeyes bash -c 'xeyes'"
+  args:
+    chdir: "{{ ansible_env.HOME }}"
+    creates: xeyes.running
+  notify: Touch xeyes.running
+
+- debug:
+    msg: "Home {{ ansible_env.HOME }}"

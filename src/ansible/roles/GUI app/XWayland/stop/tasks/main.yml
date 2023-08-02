@@ -1,0 +1,20 @@
+# Shuts down container and stops xwayland!
+
+- name: Include vars
+  ansible.builtin.include_vars:
+    dir: "{{ role_path | dirname }}/{{ item }}"
+    extensions:
+      - 'yml'
+  loop:
+  - "Host/vars"
+  - "Container/vars"
+
+- name: Delete container
+  community.general.lxd_container:
+    name: "{{container_name}}{{container_num}}"
+    state: "{{ state }}"
+
+- name: Kill Xwayland
+  ansible.builtin.shell: killall Xwayland
+  changed_when: false
+  # become: true
