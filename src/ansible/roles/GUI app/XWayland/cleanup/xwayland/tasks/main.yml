@@ -1,6 +1,7 @@
 - name: Kill Xwayland
   ansible.builtin.shell: killall Xwayland
   changed_when: false
+  failed_when: false
 
 - name: Delete xwayland.running tmp file
   ansible.builtin.file:
