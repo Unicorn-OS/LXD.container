@@ -1,18 +1,19 @@
 - name: Setup host & container profile
-  tags: [ start ]
   hosts: localhost
+  tags: [ start ]
   roles:
   - GUI app/XWayland/Host
   - GUI app/XWayland/Container
 
 - name: in Container
-  tags: [ start, test ]
   hosts: test_GUI_app_in_LXC
+  tags: [ start, test ]
   roles:
   - GUI app/XWayland/in Container
 
 
-- hosts: localhost
+- name: Cleanup
+  hosts: localhost
   tags: [ stop, never ]
   roles:
   - GUI app/XWayland/cleanup/stop

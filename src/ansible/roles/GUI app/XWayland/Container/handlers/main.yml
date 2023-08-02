@@ -1,10 +1,11 @@
 - name: Add LXD container to inventory
   ansible.builtin.blockinfile:
     create: true
+    marker: "# {{ profile_name }}"
     path: "{{ playbook_dir }}/hosts"
     block: |
       [{{ host_group_name }}]
-      {{ container_name }}
+      {{ container_name }}{{ container_num }}
 
       [{{ host_group_name }}:vars]
       ansible_connection=lxd

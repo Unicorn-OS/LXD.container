@@ -1,6 +1,6 @@
 - name: Create a container
   community.general.lxd_container:
-    name: "{{container_name}}{{container_num}}"
+    name: "{{ container_name }}{{ container_num }}"
     state: started
     source:
       type: image

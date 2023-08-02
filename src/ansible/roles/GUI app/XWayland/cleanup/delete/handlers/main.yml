@@ -1,0 +1,5 @@
+- name: Delete inventory entry
+  ansible.builtin.blockinfile:
+    marker: "# {{ profile_name }}"
+    path: "{{ playbook_dir }}/hosts"
+    state: absent
