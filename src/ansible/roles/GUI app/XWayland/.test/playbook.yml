@@ -6,8 +6,8 @@
   - GUI app/XWayland/Container
 
 - name: in Container
-  tags: start
-  hosts: xwayland
+  tags: [ start, test ]
+  hosts: test-lxc-gui-app
   roles:
   - GUI app/XWayland/in Container
 
