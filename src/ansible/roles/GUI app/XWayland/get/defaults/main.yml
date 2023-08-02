@@ -3,3 +3,6 @@ GPU: false
 
 # Shared between both Host & Container! in Xwayland & @unix socket passthrough in container.profile
 display_number: 4
+
+# create a LXC profile from template/{{name}}.j2?
+from_template: false

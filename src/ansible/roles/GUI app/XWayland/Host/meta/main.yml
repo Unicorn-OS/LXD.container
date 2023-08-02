@@ -1,3 +1,4 @@
 dependencies:
+  - GUI app/XWayland/get
   - GUI app/XWayland/Host/LXC profile
   - GUI app/XWayland/Host/start Xwayland

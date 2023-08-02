@@ -5,8 +5,10 @@
 
 - name: profile template
   ansible.builtin.include_tasks: from template.yml
+  when: from_template
 
 # OR
 - name: include profile
   ansible.builtin.include_tasks:
     file: "profile/{{ profile_name }}.yml"
+  when: not from_template
