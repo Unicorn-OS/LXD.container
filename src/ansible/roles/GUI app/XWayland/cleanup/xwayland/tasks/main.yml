@@ -3,7 +3,4 @@
   changed_when: false
   failed_when: false
 
-- name: Delete xwayland.running tmp file
-  ansible.builtin.file:
-    path: "{{ screen_proc_dir }}/{{xwayland_screen_name}}.running"
-    state: absent
+# - name: Delete xwayland Screen

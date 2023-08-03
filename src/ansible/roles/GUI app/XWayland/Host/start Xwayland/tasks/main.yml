@@ -2,19 +2,12 @@
 # https://www.google.com/search?q=ansible+run+command+in+screen
 # works!: https://stackoverflow.com/questions/64391742/screen-command-for-ansible
 
-- name: Create config_dir
-  ansible.builtin.file:
-    path: "{{ screen_proc_dir }}"
-    state: directory
+- name: Is XWayland Running?
+  ansible.builtin.shell: "screen -list | grep {{ xwayland_screen_name }}"
+  register: xwayland_screen
+  failed_when: false
+  changed_when: false
 
 - name: Start XWayland in Screen
-  ansible.builtin.shell: "screen -mdSA {{xwayland_screen_name}} bash -c 'Xwayland -retro -noreset :4'"
-  args:
-    chdir: "{{ screen_proc_dir }}"
-    creates: "{{xwayland_screen_name}}.running"
-  notify: Touch xwayland.running
-
-- debug:
-    msg: |
-      To run this manually, use:
-        `Xwayland -retro -noreset :{{display_number}}`
+  ansible.builtin.shell: "screen -mdSA {{ xwayland_screen_name }} bash -c 'Xwayland -retro -noreset :4'"
+  when: xwayland_screen.rc == 1

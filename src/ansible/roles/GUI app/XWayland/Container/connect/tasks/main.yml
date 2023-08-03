@@ -1,10 +1,9 @@
+- name: Is Connection Running?
+  ansible.builtin.shell: "screen -list | grep {{ connection_screen_name }}"
+  register: connection_screen
+  failed_when: false
+  changed_when: false
 
 - name: Connect to container Screen
   ansible.builtin.shell: "screen -mdSA {{ connection_screen_name }} bash -c '{{ connect_command }}'"
-  args:
-    chdir: "{{ screen_proc_dir }}"
-    creates: "{{ connection_screen_name }}.running"
-  notify: Touch connection.running
-
-- debug:
-    msg: "Screen: {{ connection_screen_name }}"
+  when: connection_screen.rc == 1

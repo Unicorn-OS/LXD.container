@@ -1,3 +1,1 @@
 xwayland_screen_name: "xwayland_{{display_number}}"
-
-screen_proc_dir: "{{ config_dir }}/screen"
