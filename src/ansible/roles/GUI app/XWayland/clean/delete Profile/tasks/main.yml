@@ -1,0 +1,4 @@
+- name: Delete profile
+  community.general.lxd_profile:
+    name: "{{ profile_name }}"
+    state: absent

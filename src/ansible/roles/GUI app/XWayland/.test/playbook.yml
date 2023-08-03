@@ -21,16 +21,17 @@
   - GUI app/XWayland/Container/connect
 
 
-# Stop & Cleanup
+# Stop & Clean
 - hosts: localhost
   tags: [ stop, never ]
   roles:
-  - GUI app/XWayland/cleanup/stop
+  - GUI app/XWayland/clean/stop Container
 
 - hosts: localhost
-  tags: [ delete, never ]
+  tags: [ clean, never ]
   roles:
-  - GUI app/XWayland/cleanup/delete
+  - GUI app/XWayland/clean/delete Base Container
+  - GUI app/XWayland/clean/delete Profile
 
 
 # Debug

@@ -25,7 +25,7 @@ test(){
     ansible-playbook $playbook --tags test
 }
 
-# Cleanup
+# Clean
 stop(){
     ansible-playbook $playbook --tags stop
 }

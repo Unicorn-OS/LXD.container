@@ -1,0 +1,5 @@
+- name: Delete base container
+  community.general.lxd_container:
+    name: "{{container_name}}{{ display_number }}"
+    state: absent
+  notify: Delete inventory entry
