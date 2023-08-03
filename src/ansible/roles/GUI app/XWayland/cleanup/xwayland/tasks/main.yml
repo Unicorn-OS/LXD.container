@@ -1,9 +1,9 @@
 - name: Is XWayland Running?
   ansible.builtin.shell: "screen -list | grep {{ xwayland_screen }}"
-  register: xwayland_screen
+  register: is_running
   failed_when: false
   changed_when: false
 
 - name: Close XWayland
   ansible.builtin.shell: "screen -S {{ xwayland_screen }} -p 0 -X stuff '^C'"
-  when: xwayland_screen.rc == 0
+  when: is_running.rc == 0
