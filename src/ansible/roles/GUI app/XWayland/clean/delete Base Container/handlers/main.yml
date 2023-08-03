@@ -1,6 +1,6 @@
 - name: Delete inventory entry
   ansible.builtin.blockinfile:
-    marker_begin: "{{ base_host_marker }} BEGIN"
-    marker_end: "{{ base_host_marker }} END"
+    marker_begin: "{{ host_marker_base }} BEGIN"
+    marker_end: "{{ host_marker_base }} END"
     path: "{{ playbook_dir }}/hosts"
     state: absent
