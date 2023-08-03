@@ -1,7 +1,7 @@
 # Start
 - name: Setup & Start Container
   hosts: localhost
-  tags: [ init ]
+  tags: [ start ]
   roles:
   - GUI app/XWayland/Host
   - GUI app/XWayland/Container/create
