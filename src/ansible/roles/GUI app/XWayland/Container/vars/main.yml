@@ -6,6 +6,6 @@ connect_command: "lxc exec {{ container_name }}{{ display_number }} -- sudo -u u
 
 host_group_name: test_GUI_app_in_LXC
 
-host_marker: "{{ profile_name }}"
+base_host_marker: "{{ profile_name }}"
 
 xwayland_screen: "xwayland_{{display_number}}"
