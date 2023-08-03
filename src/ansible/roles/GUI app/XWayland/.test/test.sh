@@ -5,11 +5,10 @@ link(){
     ln -srf roles/GUI\ app/XWayland/.test/playbook.yml $playbook
 }
 
-# Create
-start(){
+# Init Host & Start Container
+init(){
     link
-    # Start Container
-    ansible-playbook $playbook --tags start
+    ansible-playbook $playbook --tags init
 }
 
 # Connect
@@ -22,7 +21,7 @@ connect(){
 # Test
 test(){
     # Start Container & run Xeyes in Xwayland!
-    start
+    init
     ansible-playbook $playbook --tags test
 }
 
