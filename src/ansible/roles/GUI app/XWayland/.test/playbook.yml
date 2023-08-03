@@ -1,5 +1,5 @@
 # Start
-- name: Setup host & container profile
+- name: Setup & Start Container
   hosts: localhost
   tags: [ start ]
   roles:
