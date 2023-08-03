@@ -5,7 +5,7 @@
   roles:
   - GUI app/XWayland/Host
   - GUI app/XWayland/Container/create
-
+  - GUI app/XWayland/Container/start Xwayland
 
 # Testing
 - name: in Container
