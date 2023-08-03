@@ -1,3 +1,4 @@
 - name: Debug xwayland
   debug:
-    msg: "{{ config_dir }} | {{xwayland_screen_name}}"
+    msg: |
+      {{ xwayland_screen }}

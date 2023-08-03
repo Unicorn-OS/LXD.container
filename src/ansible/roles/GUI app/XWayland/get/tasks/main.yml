@@ -15,5 +15,4 @@
       - 'yml'
   loop:
   - "Host/vars"
-  - "Host/start Xwayland/vars"
   - "Container/vars"
