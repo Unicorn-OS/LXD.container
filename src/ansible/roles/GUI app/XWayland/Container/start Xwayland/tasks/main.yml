@@ -3,11 +3,11 @@
 # works!: https://stackoverflow.com/questions/64391742/screen-command-for-ansible
 
 - name: Is XWayland Running?
-  ansible.builtin.shell: "screen -list | grep {{ xwayland_screen_name }}"
-  register: xwayland_screen
+  ansible.builtin.shell: "screen -list | grep {{ xwayland_screen }}"
+  register: xwayland_proc
   failed_when: false
   changed_when: false
 
 - name: Start XWayland in Screen
-  ansible.builtin.shell: "screen -mdSA {{ xwayland_screen_name }} bash -c 'Xwayland -retro -noreset :4'"
-  when: xwayland_screen.rc == 1
+  ansible.builtin.shell: "screen -mdSA {{ xwayland_screen }} bash -c 'Xwayland -retro -noreset :4'"
+  when: xwayland_proc.rc == 1
