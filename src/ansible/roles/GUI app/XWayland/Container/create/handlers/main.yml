@@ -3,7 +3,7 @@
     create: true
     marker_begin: "{{ host_marker_base }} BEGIN"
     marker_end: "{{ host_marker_base }} END"
-    path: "{{ playbook_dir }}/hosts"
+    path: "{{ inventory_file }}"
     block: |
       [{{ host_group_name_base }}]
       {{ container_name }}{{ display_number }}
