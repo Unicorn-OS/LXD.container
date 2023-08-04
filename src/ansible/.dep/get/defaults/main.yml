@@ -1,16 +1,21 @@
+vagrant: false
+
 # Change this file to add dependency artifacts, repos, & roles!
 repo: [
   { repo: "git@github.com:Unicorn-OS/getGPU.git", name: "getGPU"},
   ]
 
 role: [
-#  { git: "Uni.os.default", name: "uni", path: "src/ansible/roles/uni"},
+#  { git: "Browser", name: "Browser", path: "src/ansible/roles/Browser"},
   ]
 
 library: [
   { git: "getGPU", name: "get_gpu.py", path: "src/ansible/library"},
   ]
 
-# set Inventory
-dynamic_inventory: "{{static_inventory}}"
+# set Inventory "{{static_inventory}}"
+dynamic_inventory: hosts
 test_inventory: true
+
+# dependencies
+git_fetch_update: true

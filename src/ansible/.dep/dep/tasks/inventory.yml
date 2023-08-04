@@ -1,0 +1,8 @@
+- name: gitignore hosts
+  ansible.builtin.lineinfile:
+    path: "{{playbook_dir}}/inventory/.gitignore"
+    line: '{{ item }}'
+    create: true
+  loop:
+  - '*'
+  - '!local'
