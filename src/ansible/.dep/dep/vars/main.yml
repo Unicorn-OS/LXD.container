@@ -10,6 +10,3 @@ submodule_dir: "{{ansible_env.HOME}}/src/sub"
 # SubFolders
 artifact_dir: "{{depend_dir}}/artifact"
 git_dir: "{{depend_dir}}/git"
-
-# Inventory
-static_inventory: "{{dep_home}}/pre/files/inventory/test/hosts"
