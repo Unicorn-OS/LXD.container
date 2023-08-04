@@ -8,4 +8,4 @@ display_number: 4
 # create a LXC profile from template/{{name}}.j2?
 from_template: false
 
-inventory_file: "{{ playbook_dir }}/inventory/base_container"
+inventory_file_base: "{{ playbook_dir }}/inventory/base_container"

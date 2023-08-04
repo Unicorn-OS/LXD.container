@@ -8,5 +8,5 @@
   ansible.builtin.blockinfile:
     marker_begin: "{{ host_marker_base }} BEGIN"
     marker_end: "{{ host_marker_base }} END"
-    path: "{{ inventory_file }}"
+    path: "{{ inventory_file_base }}"
     state: absent
