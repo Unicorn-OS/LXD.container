@@ -1,0 +1,21 @@
+# adapted from: https://www.cyberciti.biz/faq/how-to-install-setup-lxd-on-fedora-linux/
+sudo dnf install snapd
+snap version
+sudo snap install lxd
+sudo reboot 
+lxd init
+sudo usermod -a -G lxd me
+id me
+newgrp lxd
+lxd init
+nano lxd.preseed
+lxc image list images:
+lxc launch images:ubuntu/lunar/amd64 ubuntu-23
+lxc list
+lxc exec ubuntu-23 -- /bin/bash
+sudo dnf install chromium
+lxc exec ubuntu-23 bash
+ssh-keygen 
+cat .ssh/id_rsa.pub 
+sudo apt install ansible
+sudo dnf install ansible
